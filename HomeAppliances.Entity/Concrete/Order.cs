@@ -19,6 +19,7 @@ namespace HomeAppliances.Entity.Concrete
         public string District { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
+        public string UserID { get; set; } // TCKN
         public DateTime CreatedDate { get; set; }
         public List<OrderItem> OrderItems { get; set; }
     }

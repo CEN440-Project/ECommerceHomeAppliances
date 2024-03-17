@@ -9,6 +9,7 @@ namespace HomeAppliances.Entity.Concrete
     public class Card
     {
         public int Id { get; set; }
+        public string UserID { get; set; } //TCKN
 
         public List<CardItem> CardItems { get; set; }
     }

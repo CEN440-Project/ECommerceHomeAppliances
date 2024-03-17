@@ -1,0 +1,44 @@
+﻿using HomeAppliances.Data.Abstract;
+using HomeAppliances.Entity.Concrete;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HomeAppliances.Data.Concrete.EfCore
+{
+    public class EfCoreProductDal : EfCoreGenericRepository<Product, Context>, IProductDal
+    {
+        public Product GetByIdWithBrands(int id)
+        {
+            using (var context = new Context())
+            {
+                return context.Products
+                        .Where(i => i.BrandID == id)
+                        .Include(i => i.Brand)
+                        .FirstOrDefault();
+            }
+        }
+
+        public int GetCountByBrand(string brand)
+        {
+            throw new NotImplementedException();
+        }
+        public Product GetProductDetails(int id)
+        {
+            using (var context = new Context())
+            {
+                return context.Products
+                            .Where(i => i.ProductID == id)
+                            .FirstOrDefault();
+            }
+        }
+
+        public List<Product> GetProductsByBrand(string brand, int page, int pageSize)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
