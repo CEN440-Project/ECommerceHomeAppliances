@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Data.Concrete.EfCore
 {
-    public class Context : DbContext
+    public class EfCoreContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

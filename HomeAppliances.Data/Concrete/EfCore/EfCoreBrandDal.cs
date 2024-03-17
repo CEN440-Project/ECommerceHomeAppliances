@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Data.Concrete.EfCore
 {
-    public class EfCoreBrandDal : EfCoreGenericRepository<Brand, Context>, IBrandDal
+    public class EfCoreBrandDal : EfCoreGenericRepository<Brand, EfCoreContext>, IBrandDal
     {
         //
     }

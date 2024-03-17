@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HomeAppliances.Data.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(EfCoreContext))]
     [Migration("20240302154125_mig_add_first_mig")]
     partial class mig_add_first_mig
     {

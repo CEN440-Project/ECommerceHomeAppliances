@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HomeAppliances.Data.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(EfCoreContext))]
     [Migration("20240317110001_mig_add_user_prop")]
     partial class mig_add_user_prop
     {

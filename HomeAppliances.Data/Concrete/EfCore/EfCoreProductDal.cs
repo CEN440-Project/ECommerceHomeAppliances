@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Data.Concrete.EfCore
 {
-    public class EfCoreProductDal : EfCoreGenericRepository<Product, Context>, IProductDal
+    public class EfCoreProductDal : EfCoreGenericRepository<Product, EfCoreContext>, IProductDal
     {
         public Product GetByIdWithBrands(int id)
         {
-            using (var context = new Context())
+            using (var context = new EfCoreContext())
             {
                 return context.Products
                         .Where(i => i.BrandID == id)
@@ -28,7 +28,7 @@ namespace HomeAppliances.Data.Concrete.EfCore
         }
         public Product GetProductDetails(int id)
         {
-            using (var context = new Context())
+            using (var context = new EfCoreContext())
             {
                 return context.Products
                             .Where(i => i.ProductID == id)

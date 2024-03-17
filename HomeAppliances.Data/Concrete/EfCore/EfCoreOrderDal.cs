@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Data.Concrete.EfCore
 {
-    public class EfCoreOrderDal : EfCoreGenericRepository<Order, Context>, IOrderDal
+    public class EfCoreOrderDal : EfCoreGenericRepository<Order, EfCoreContext>, IOrderDal
     {
         public List<Order> GetOrders(string userId)
         {
-            using (var context = new Context())
+            using (var context = new EfCoreContext())
             {
                 var orders = context.Orders
                                 .Include(i => i.OrderItems)

@@ -1,8 +1,27 @@
+using HomeAppliances.Data.Abstract;
+using HomeAppliances.Data.Concrete.EfCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
+
+// Configurations
+#region Services
+builder.Services.AddScoped(Context);
+builder.Services.AddScoped(typeof(IRepository<>), typeof(EfCoreGenericRepository<T,EfCoreContext>));
+nt
+builder.Services.AddScoped(typeof(ICardDal), typeof(EfCoreCardDal));
+builder.Services.AddScoped(typeof(IBrandDal), typeof(EfCoreBrandDal));
+builder.Services.AddScoped(typeof(IProductDal), typeof(EfCoreProductDal));
+builder.Services.AddScoped(typeof(IOrderDal), typeof(EfCoreOrderDal));
+
+builder.Services.AddScoped(typeof(ICardDal), typeof(EfCoreCardDal));
+builder.Services.AddScoped(typeof(IBrandDal), typeof(EfCoreBrandDal));
+builder.Services.AddScoped(typeof(IProductDal), typeof(EfCoreProductDal));
+builder.Services.AddScoped(typeof(IOrderDal), typeof(EfCoreOrderDal));
+#endregion
 
 var app = builder.Build();
 

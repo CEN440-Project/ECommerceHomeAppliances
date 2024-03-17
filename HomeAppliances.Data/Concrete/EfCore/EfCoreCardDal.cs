@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Data.Concrete.EfCore
 {
-    public class EfCoreCardDal : EfCoreGenericRepository<Card, Context>, ICardDal
+    public class EfCoreCardDal : EfCoreGenericRepository<Card, EfCoreContext>, ICardDal
     {
         public override void Update(Card entity)
         {
-            using (var context = new Context())
+            using (var context = new EfCoreContext())
             {
                 context.Cards.Update(entity);
                 context.SaveChanges();
@@ -22,7 +22,7 @@ namespace HomeAppliances.Data.Concrete.EfCore
 
         public Card GetByUserID(string userId)
         {
-            using (var context = new Context())
+            using (var context = new EfCoreContext())
             {
                 return context
                             .Cards
@@ -33,7 +33,7 @@ namespace HomeAppliances.Data.Concrete.EfCore
         }
         public void DeleteFromCard(int cardId, int productId)
         {
-            using (var context = new Context())
+            using (var context = new EfCoreContext())
             {
                 context.Database.ExecuteSql($"delete from CardItem where CardId={cardId} And ProductId={productId}");
             }
@@ -41,7 +41,7 @@ namespace HomeAppliances.Data.Concrete.EfCore
 
         public void ClearCard(string cardId)
         {
-            using (var context = new Context())
+            using (var context = new EfCoreContext())
             {
                 context.Database.ExecuteSql($"delete from CardItem where CardId={cardId}");
             }

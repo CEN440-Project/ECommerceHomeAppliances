@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HomeAppliances.Data.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(EfCoreContext))]
     partial class ContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
