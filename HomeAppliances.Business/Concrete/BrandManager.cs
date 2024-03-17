@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Business.Concrete
 {
-    public class BrandManager
+    public class BrandManager : IBrandService
     {
         private IBrandDal _brandDal;
         public BrandManager(IBrandDal brandDal)
