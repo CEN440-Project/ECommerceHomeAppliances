@@ -12,4 +12,3 @@ namespace HomeAppliances.Data.Abstract
         List<Order> GetOrders(string userId);
     }
 }
-}
