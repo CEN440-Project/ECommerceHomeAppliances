@@ -7,10 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\HomeAppliances.Data\HomeAppliances.Data.csproj" />
     <ProjectReference Include="..\HomeAppliances.Entity\HomeAppliances.Entity.csproj" />
   </ItemGroup>
 

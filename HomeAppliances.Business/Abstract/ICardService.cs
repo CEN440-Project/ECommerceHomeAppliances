@@ -9,10 +9,10 @@ namespace HomeAppliances.Business.Abstract
 {
     public interface ICardService
     {
-        void InitializeCart(string userId);
-        Card GetByUserID(string userId);
-        void AddToCart(string userId, int productId, int quantity);
-        void DeleteFromCard(int cardId, int productId);
+        void InitializeCard(string userId);
+        Card GetCardByUserID(string userId);
+        void AddToCard(string userId, int productId, int quantity);
+        void DeleteFromCard(string userId, int productId);
         void ClearCard(string cardId);
     }
 }

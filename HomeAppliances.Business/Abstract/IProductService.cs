@@ -10,7 +10,7 @@ namespace HomeAppliances.Business.Abstract
     public interface IProductService
     {
         Product GetById(int id);
-        Product GetByIdWithBrand(int id);
+        Product GetByIdWithBrands(int id);
         Product GetProductDetails(int id);
         List<Product> GetAll();
         List<Product> GetProductsByBrand(string brand, int page, int pageSize);
@@ -19,6 +19,5 @@ namespace HomeAppliances.Business.Abstract
         bool Create(Product entity);
         void Update(Product entity);
         void Delete(Product entity);
-        void Update(Product entity, int[] categoryIds);
     }
 }
