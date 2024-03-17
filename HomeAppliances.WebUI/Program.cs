@@ -1,3 +1,5 @@
+using HomeAppliances.Business.Abstract;
+using HomeAppliances.Business.Concrete;
 using HomeAppliances.Data.Abstract;
 using HomeAppliances.Data.Concrete.EfCore;
 
@@ -9,18 +11,18 @@ builder.Services.AddHttpClient();
 
 // Configurations
 #region Services
-builder.Services.AddScoped(Context);
-builder.Services.AddScoped(typeof(IRepository<>), typeof(EfCoreGenericRepository<T,EfCoreContext>));
-nt
-builder.Services.AddScoped(typeof(ICardDal), typeof(EfCoreCardDal));
-builder.Services.AddScoped(typeof(IBrandDal), typeof(EfCoreBrandDal));
-builder.Services.AddScoped(typeof(IProductDal), typeof(EfCoreProductDal));
-builder.Services.AddScoped(typeof(IOrderDal), typeof(EfCoreOrderDal));
+builder.Services.AddScoped<EfCoreContext>();
+//builder.Services.AddScoped(typeof(IRepository<>), typeof(EfCoreGenericRepository< Product,EfCoreContext>));
 
 builder.Services.AddScoped(typeof(ICardDal), typeof(EfCoreCardDal));
 builder.Services.AddScoped(typeof(IBrandDal), typeof(EfCoreBrandDal));
 builder.Services.AddScoped(typeof(IProductDal), typeof(EfCoreProductDal));
 builder.Services.AddScoped(typeof(IOrderDal), typeof(EfCoreOrderDal));
+
+builder.Services.AddScoped(typeof(ICardService), typeof(CardManager));
+builder.Services.AddScoped(typeof(IBrandService), typeof(BrandManager));
+builder.Services.AddScoped(typeof(IProductService), typeof(ProductManager));
+builder.Services.AddScoped(typeof(IOrderService), typeof(OrderManager));
 #endregion
 
 var app = builder.Build();
