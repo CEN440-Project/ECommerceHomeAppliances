@@ -10,415 +10,446 @@
     <link type="image/x-icon" href="images/fav-icon.png" rel="icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/shoes.css">
+    <link rel="stylesheet" type="text/css" href="css/xpoge.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142494086-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-142494086-2');
+    </script>
 	</head>
 	<body>
+    <!-- Start preloader -->
+    <div id="preloader"></div>
+    <!-- End preloader -->
 
-		<!-- Start preloader -->
-		<div id="preloader"></div>
-		<!-- End preloader -->
+    <!-- Search Screen start -->
+    <div class="sidebar-search-wrap">
+        <div class="sidebar-table-container">
+          <div class="sidebar-align-container">
+              <div class="search-closer right-side"></div>
+              <div class="search-container">
+                <form method="get" id="search-form">
+                  <input type="text" id="s" class="search-input" name="s" placeholder="Start Searching">
+                </form>
+                <span>Search and Press Enter</span>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- Search Screen end -->
 
-		<!-- Search Screen start -->
-		<div class="sidebar-search-wrap">
-		    <div class="sidebar-table-container">
-			    <div class="sidebar-align-container">
-			        <div class="search-closer right-side"></div>
-			        <div class="search-container">
-			          <form method="get" id="search-form">
-			            <input type="text" id="s" class="search-input" name="s" placeholder="Search text">
-			          </form>
-			          <span>Search and Press Enter</span>
-			        </div>
-			    </div>
-		    </div>
-		</div>
-		<!-- Search Screen end -->
+    <div class="main">
+      <!-- Header start -->
+      <header id="header">
+        <div class="container">
+          <div class="row m-0">
+            <div class="col-lg-3 col-md-4 col-4 p-0">
+                    <div class="navbar-header">
+                        <a class="navbar-brand page-scroll" href="index.html">
+                          <img alt="xpoge" src="images/logo.png">
+                        </a> 
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-8 p-0">
+                  <div class="right-side">
+                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+                    </button>
+                    <div class="overlay"></div>
+                    <div id="menu" class="navbar-collapse collapse" >
+                          <ul class="nav navbar-nav">
+                            <li class="level">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="level dropdown">
+                              <span class="opener plus"></span>
+                                <a href="shop.html" class="nav-link">Men</a>
+                                <div class="megamenu mobile-sub-menu">
+                                  <div class="megamenu-inner-top">
+                                    <ul class="sub-menu-level1">
+                                      <li class="level2 "> <a href="shop.html"><span>Men Cloths</span></a>
+                                        <ul class="sub-menu-level2">
+                                          <li class="level3"><a href="shop.html"><span>■</span>Navy Blazer</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Sport Jeans</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Sleeveless Shirt</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Trousers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="level2"> <a href="shop.html"><span>Men Fashion</span></a>
+                                        <ul class="sub-menu-level2 ">
+                                          <li class="level3"><a href="shop.html"><span>■</span>Purse</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Sport Shoes</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Wallets</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Belt</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="level2"> <a href="shop.html"><span>Accessories</span></a>
+                                        <ul class="sub-menu-level2 ">
+                                          <li class="level3"><a href="shop.html"><span>■</span>Sunglasses</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Pocket Watch</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Gloves</a></li>
+                                          <li class="level3"><a href="shop.html"><span>■</span>Socks</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>
+                            </li>
+                            <li class="level">
+                                <a href="shop.html" class="nav-link">Women</a>
+                            </li>
+                            <li class="level">
+                                <a href="shop.html" class="nav-link">Juniors</a>
+                            </li>
+                            <li class="level dropdown">
+                              <span class="opener plus"></span>
+                                <a href="blog-left-col.html">Blog</a>
+                                <div class="megamenu mobile-sub-menu">
+                                  <div class="megamenu-inner-top">
+                                    <ul class="sub-menu-level1">
+                                      <li class="level2 ">
+                                        <ul class="sub-menu-level2">
+                                            <li class="level3"><a href="blog-left-col.html"><span>■</span>Blog Left-Sidebar</a></li>
+                                            <li class="level3"><a href="blog-right-col.html"><span>■</span>Blog Right-Sidebar</a></li>
+                                            <li class="level3"><a href="blog-detail.html"><span>■</span>Singal Blog</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>
+                            </li>
+                            <li class="level dropdown">
+                              <span class="opener plus"></span>
+                                <a href="#" class="nav-link">Pages</a>
+                                <div class="megamenu mobile-sub-menu">
+                                  <div class="megamenu-inner-top">
+                                    <ul class="sub-menu-level1">
+                                      <li class="level2 ">
+                                        <ul class="sub-menu-level2">
+                                            <li class="level3"><a href="contact.html"><span>■</span>Contact</a></li>
+                                            <li class="level3"><a href="checkout.html"><span>■</span>Checkout</a></li>
+                                            <li class="level3"><a href="wishlist.html"><span>■</span>Wishlist</a></li>
+                                            <li class="level3"><a href="404.html"><span>■</span>404</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>
+                            </li>
+                          </ul>
+                      </div>
+                      <div class="header-right-link">
+                        <ul>
+                          <li class="search-box">
+                            <a href="#"><span></span></a>
+                          </li>
+                          <li class="account-icon"> 
+                            <a href="#"><span></span></a>
+                            <div class="header-link-dropdown account-link-dropdown">
+                                <ul class="link-dropdown-list">
+                                  <li> <span class="dropdown-title">Default welcome msg!</span>
+                                    <ul>
+                                      <li><a href="login.html">Sign In</a></li>
+                                      <li><a href="register.html">Create an Account</a></li>
+                                    </ul>
+                                  </li>
+                                  <li> <span class="dropdown-title">Language :</span>
+                                    <ul>
+                                      <li><a class="active" href="#">English</a></li>
+                                      <li><a href="#">French</a></li>
+                                      <li><a href="#">German</a></li>
+                                    </ul>
+                                  </li>
+                                  <li> <span class="dropdown-title">Currency :</span>
+                                    <ul>
+                                      <li><a class="active" href="#">USD</a></li>
+                                      <li><a href="#">AUD</a></li>
+                                      <li><a href="#">EUR</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                            </div>
+                          </li>
+                          <li class="cart-icon"> 
+                            <a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+                            <div class="cart-dropdown header-link-dropdown">
+                              <ul class="cart-list link-dropdown-list">
+                                <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                                  <figure> <a href="product-page.html" class="pull-left"> <img alt="Xpoge" src="images/1.jpg"></a>
+                                    <figcaption> <span><a href="product-page.html">Men's Full Sleeves Collar Shirt</a></span>
+                                      <p class="cart-price">$14.99</p>
+                                      <div class="product-qty">
+                                        <label>Qty:</label>
+                                        <div class="custom-qty">
+                                          <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                                        </div>
+                                      </div>
+                                    </figcaption>
+                                  </figure>
+                                </li>
+                                <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                                  <figure> <a href="product-page.html" class="pull-left"> <img alt="Xpoge" src="images/2.jpg"></a>
+                                    <figcaption> <span><a href="product-page.html">Women's Cape Jacket</a></span>
+                                      <p class="cart-price">$14.99</p>
+                                      <div class="product-qty">
+                                        <label>Qty:</label>
+                                        <div class="custom-qty">
+                                          <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                                        </div>
+                                      </div>
+                                    </figcaption>
+                                  </figure>
+                                </li>
+                              </ul>
+                              <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
+                              <div class="clearfix"></div>
+                              <div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </header>
+      <!-- Header end -->
 
-		<div class="main" id="main">
-			<header class="header transition">
-				<div class="container position-r">
-					<div class="row">
-						<div class="col-lg-2 col-md-4 col-6 align-flax">
-				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
-					                <img alt="logo" src="images/logo.png" class="transition">
-					            </a> 
-				            </div>
-					    </div>
-					    <div class="col-lg-10 col-md-8 col-6 position-i">
-					       	<div class="menu-left transition">
-						        <div class="menu" >
-						            <ul>
-							            <li>
-							                <a href="index.html">Home</a>
-							            </li>
-							            <li class="dropdown">
-							            	<span class="opener plus"></span>
-							                <a href="shop.html">Pages</a>
-							                <div class="megamenu">
-							                	<div class="megamenu-inner">
-							                		<ul>
-							                			<li><a href="about.html">About Us</a></li>
-									                    <li><a href="shop-list.html">Shop List</a></li>
-									                    <li><a href="product-detail.html">Product Detail</a></li>
-									                    <li><a href="wishlist.html">Wishlist</a></li>
-									                    <li><a href="404.html">404</a></li>
-									                </ul>
-							                	</div>
-							                </div>
-							            </li>
-							            <li class="dropdown">
-							            	<span class="opener plus"></span>
-							                <a href="shop.html">Shop</a>
-							                <div class="megamenu full">
-							                	<div class="megamenu-inner">
-							                		<div class="row">
-							                			<div class="col-xl-3 col-lg-3 col-md-3 display-nr">
-							                				<div class="shop-img-in">
-							                					<div class="row">
-							                						<div class="col-xl-12 col-lg-12 col-md-12 pb-10">
-							                							<a href="product-detail.html" class="img-drop-bottom">
-							                								<img src="images/menu.jpg" class="transition" alt="img">
-							                							</a>
-							                						</div>
-							                					</div>
-							                				</div>
-							                			</div>
-							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Chap Shoes</a>
-							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                        </ul>
-							                			</div>
-							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Fashion Shoes</a>
-							                				<ul>
-									                            <li><a href="shop.html">Opinga</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                            <li><a href="shop.html">Driving Moccasins</a></li>
-									                            <li><a href="shop.html">High Heeled</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                        </ul>
-							                			</div>
-							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Product Types</a>
-							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                        </ul>
-							                			</div>
-							                		</div>
-							                	</div>
-							                </div>
-							            </li>
-							            <li class="dropdown">
-							            	<span class="opener plus"></span>
-							                <a href="blog-left.html">Blog</a>
-							                <div class="megamenu">
-							                	<div class="megamenu-inner">
-							                		<ul>
-									                    <li><a href="blog-left.html">Blog Left</a></li>
-									                    <li><a href="blog-right.html">Blog Right</a></li>
-									                    <li><a href="blog-detail.html">Blog Detail</a></li>
-									                </ul>
-							                	</div>
-							                </div>
-							            </li>
-							            <li>
-							                <a href="contact.html">Contact</a>
-							            </li>
-						            </ul>
-						        </div>
-					        </div>
-					        <div class="search-right">
-					        	<div class="menu-toggle"><span></span></div>
-					        	<div class="search-menu">
-						        	<input type="text" name="search" class="search-input" placeholder="Search text">
-						        	<input type="submit" name="submit" class="search-btn">
-						        	<div class="search-button-i transition">
-						        		<img src="images/search.png" class="position-r transition" alt="search">
-						        	</div>
-						        </div>
-						        <ul class="login-cart">
-						        	<li>
-						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-								        </div>
-						        	</li>
-						        	<li>
-						        		<div class="cart-menu">
-								        	<div class="cart-icon position-r">
-								        		<img src="images/car-icon-w.png" class="position-r transition" alt="cart">
-								        	</div>
-								        	<div class="cart-dropdown header-link-dropdown">
-												<ul class="cart-list link-dropdown-list">
-													<li> 
-													  	<a href="javascript:void(0)" class="close-cart"><i class="fa fa-times-circle"></i></a>
-													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
-													    		<img alt="product" src="images/product-1.jpg">
-													    	</a>
-													      	<figcaption> 
-													      		<span>
-													      			<a href="product-detail.html">Men's Full Sleeves Collar Shirt</a>
-													      		</span>
-													        	<p class="cart-price">$14.99</p>
-													        	<div class="product-qty">
-													          		<label>Qty:</label>
-													          		<div class="custom-qty">
-													            		<input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
-													          		</div>
-													        	</div>
-													      	</figcaption>
-													    </figure>
-													</li>
-													<li> 
-														<a class="close-cart"><i class="fa fa-times-circle"></i></a>
-													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
-													    		<img alt="product" src="images/product-2.jpg">
-													    	</a>
-													      	<figcaption> 
-													      		<span>
-													      			<a href="product-detail.html">Women's Cape Jacket</a>
-													      		</span>
-													        	<p class="cart-price">$14.99</p>
-													        	<div class="product-qty">
-													          		<label>Qty:</label>
-													          		<div class="custom-qty">
-													            		<input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
-													          		</div>
-													        	</div>
-													      	</figcaption>
-													    </figure>
-													</li>
-												</ul>
-												<p class="cart-sub-totle"> 
-													<span class="pull-left">Cart Subtotal</span> 
-													<span class="pull-right"><strong class="price-box">$29.98</strong></span> 
-												</p>
-												<div class="clearfix"></div>
-												<div class="mt-20"> 
-													<a href="cart.html" class="btn">Cart</a> 
-													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
-												</div>
-											</div>
-								        </div>
-						        	</li>
-						        </ul>
-					        </div>
-					    </div>
-					</div>
-				</div>
-			</header>
+      <!-- Contact contant start -->
+      <div class="contant">
+        <div id="banner-part" class="banner inner-banner">
+          <div class="container">
+            <div class="bread-crumb-main">
+              <h1 class="banner-title">Contact us</h1>
+              <div class="breadcrumb">
+                <ul class="inline">
+                  <li><a href="index.html">Home</a></li>
+                  <li>Contact us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-part pt-100">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="add-map pb-100">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.1812836849363!2d144.95343106869794!3d-37.81739907631358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s121+King+St%2C+Melbourne+VIC+3000%2C+Australia!5e0!3m2!1sen!2sin!4v1562916623921!5m2!1sen!2sin" height="585" style="border:0;width:100%;" allowfullscreen></iframe>
+                </div>
+                <div class="pb-100">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="contact-box mb-sm-20">
+                        <ul>
+                          <li>
+                            <div class="contact-thumb">
+                              <img src="images/address-icon.svg" alt="xpoge">
+                            </div>
+                            <div class="contact-box-detail">
+                              <h4 class="contact-title">Visit Office</h4>
+                              <p>869 Lexington Ave, New York, NY 10065, USA</p>
+                            </div>
+                          </li>
+                          
+                          <li>
+                            <div class="contact-thumb">
+                              <img src="images/mail-icon.svg" alt="xpoge">
+                            </div>
+                            <div class="contact-box-detail">
+                              <h4 class="contact-title">Email</h4>
+                              <p>xpoge@hi123.com</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="contact-thumb">
+                              <img src="images/phone-icon.svg" alt="xpoge">
+                            </div>
+                            <div class="contact-box-detail">
+                              <h4 class="contact-title">Call Us</h4>
+                              <p>+91 123 456 789 0</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="heading-part mb-30">
+                        <h3>Leave a message</h3>
+                      </div>
+                      <div class="form-detail">
+                        <form class="main-form">
+                          <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                  <input type="text" placeholder="Name" required="">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                  <input type="text" placeholder="Subject" required="">
+                                </div>
+                              </div>
+                              <div class="col-lg-4 col-12">
+                                <div class="form-group">
+                                  <input type="text" placeholder="Email" required="">
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-group">
+                                  <textarea placeholder="Message" rows="4" required=""></textarea>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn-color">Send Massage</button>
+                              </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact contant end -->
 
-			<section class="page-banner">
-				<div class="container">
-					<div class="page-banner-in">
-						<div class="row">
-							<div class="col-xl-6 col-lg-6 col-12">
-								<h1 class="page-banner-title text-uppercase">Contact Us</h1>
-							</div>
-							<div class="col-xl-6 col-lg-6 col-12">
-								<ul class="right-side">
-									<li><a href="index.html">Home</a></li>
-									<li>Contact Us</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+      <!-- Newslatter section start -->
+      <section class="newsletter-section align-center ptb-100">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-9 col-12">
+              <div class="newsletter-title">
+                <h2 class="main_title">Sign up for Newsletter </h2>
+                <p>Wants to get latest updates! sign up for Free </p>
+              </div>
+              <div class="newsletter-input">
+                <form>
+                  <div class="form-group m-0">
+                    <input type="email" placeholder="Your email address" required="">
+                  </div>
+                  <button type="submit" class="btn btn-color">
+                    <span class="d-none d-sm-block">Subscribe</span> <i class="fa fa-send d-block d-sm-none"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Newslatter section end -->
 
-			<div class="contact-map pt-100">
-				<div class="container">
-					<div class="add-map">
-		                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14767.196245276182!2d70.7525182!3d22.28560025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1600774762214!5m2!1sen!2sin" style="border:0; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-		            </div>
-				</div>
-			</div>
-
-			<section class="contact-form pt-100">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="contact-box">
-								<ul>
-									<li>
-					                    <div class="contact-thumb">
-					                        <img src="images/location.png" alt="location">
-					                    </div>
-					                    <div class="contact-box-detail">
-					                        <h2 class="contact-title text-uppercase">ADDRESS</h2>
-					                        <p>Queens stae park city, Momin Tower 78, New York,WT47.</p>
-					                    </div>
-					                </li>
-					                <li>
-					                    <div class="contact-thumb">
-					                        <img src="images/mail.png" alt="mail">
-					                    </div>
-					                    <div class="contact-box-detail">
-					                        <h2 class="contact-title text-uppercase">Email</h2>
-					                        <a href="mailto:expoge@exmaple.com">expoge@exmaple.com, expoge@exmaple.com</a>
-					                    </div>
-					                </li>
-					                <li>
-					                    <div class="contact-thumb">
-					                        <img src="images/admin.png" alt="user">
-					                    </div>
-					                    <div class="contact-box-detail">
-					                        <h2 class="contact-title text-uppercase">Phone</h2>
-					                        <a href="tel:+911234567890">+91 123 456 789 0, +91 123 456 789 0</a>
-					                    </div>
-					                </li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-8">
-							<div class="contact-form-detail">
-								<h2 class="contact-head text-uppercase">LEAVE A MESSAGE</h2>
-								<form>
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<input type="text" class="form-control" placeholder="Name*" required>
-											</div>
-											<div class="form-group">
-												<input type="text" class="form-control" placeholder="Your Email*" required>
-											</div>
-											<div class="form-group">
-												<input type="text" class="form-control" placeholder="Phone*" required>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<textarea class="form-control" placeholder="Massage"></textarea>
-											</div>
-										</div>
-										<div class="col-12">
-											<button class="btn btn-color">submit form</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<div class="top-scrolling">
-				<a href="#main" class="scrollTo"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-			</div>
-
-			<section class="newsletter pt-100">
-				<div class="container">
-					<div class="newsletter-inner text-center ptb-100">
-						<h2 class="newsletter-title">Sign up for Newsletter</h2>
-						<p class="newsletter-sub">Wants to get latest updates! sign up for Free</p>
-						<form>
-						  <div class="form-group">
-						    <input type="email" class="form-control" placeholder="Your email address" required>
-						  </div>
-						  <button type="submit" class="form-btn text-uppercase">
-							<span class="sub-r">Subscribe</span> 
-							<i class="fa fa-send icon-r"></i>
-						</button>
-						</form>
-					</div>
-				</div>
-			</section>
-
-			<footer class="footer pt-100">
-				<div class="container">
-					<div class="footer-inner">
-						<div class="footer-box">
-							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
-							</div>
-							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
-						</div>
-						<div class="footer-box footer-static">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Our company</h2>
-							<ul class="footer-block-contant">
-								<li><a href="#">My Account</a></li>
-								<li><a href="#">Order History</a></li>
-								<li><a href="wishlist.html">Wish List</a></li>
-								<li><a href="#">Newsletter</a></li>
-								<li><a href="#">Site Map</a></li>
-								<li><a href="#">Gift Certificates</a></li>
-							</ul>
-						</div>
-						<div class="footer-box footer-static">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Information</h2>
-							<ul class="footer-block-contant">
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="#">Delivery Information</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="#">Brands</a></li>
-							</ul>
-						</div>
-						<div class="footer-box footer-static m-0">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Your Account</h2>
-							<ul class="footer-block-contant">
-								<li><a href="#">Running Shoes</a></li>
-								<li><a href="#">Football Shoes</a></li>
-								<li><a href="#">Basketball Shoes</a></li>
-								<li><a href="#">Volleyball Shoes</a></li>
-								<li><a href="#">Trainee Shoes</a></li>
-							</ul>
-						</div>
-						<div class="footer-box footer-contact footer-static m-0">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Contact us</h2>
-							<ul class="footer-block-contant">
-								<li><img src="images/cont-1.png" alt="img"><span>28 Green Tower, Street Name <br>New York City, USA</span></li>
-								<li><img src="images/cont-2.png" alt="img"><a href="tel:+911234567890">+ 91 123 456 789 0</a></li>
-								<li><img src="images/cont-3.png" alt="img"><a href="mailto:xpoge@example.com">xpoge@example.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="copy-right mt-100">
-						<div class="row">
-							<div class="col-xl-6 col-lg-6 col-md-12">
-								<p class="copyright-text">&#169; Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/" target="_blank">TemplatesCoder</a></p>
-							</div>
-							<div class="col-xl-6 col-lg-6 col-md-12">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-	
-		<script src="js/jquery-3.4.1.min.js"></script>
-		<script src="js/custom.js"></script>
-	</body>
+      <!-- Footer section start -->
+      <footer class="footer-part">
+        <div class="container">
+          <div class="footer-top ptb-100">
+            <div class="mb_-30">
+              <div class="row">
+                <div class="col-12 col-lg-3 col-md-6">
+                  <div class="footer-about mb-sm-30">
+                    <div class="footer-logo">
+                      <a href="index.html">
+                        <img src="images/logo.png" alt="logo">
+                      </a>
+                    </div>
+                    <p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-6">
+                  <div class="footer-static-block">
+                    <span class="opener plus"></span>
+                    <h3 class="head-three">Information</h3>
+                    <ul class="footer-menu footer-block-contant">
+                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="javascript:void(0)">Brands</a></li>
+                      <li><a href="blog-left-col.html">Blog</a></li>
+                      <li><a href="javascript:void(0)">Returns</a></li>
+                      <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-6">
+                  <div class="footer-static-block">
+                    <span class="opener plus"></span>
+                    <h3 class="head-three">My Account</h3>
+                    <ul class="footer-menu footer-block-contant">
+                      <li><a href="javascript:void(0)">Order History</a></li>
+                      <li><a href="wishlist.html">Wish List</a></li>
+                      <li><a href="javascript:void(0)">Newsletter</a></li>
+                      <li><a href="javascript:void(0)">Specials</a></li>
+                      <li><a href="javascript:void(0)">Gift Certificates</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-6">
+                  <div class="footer-static-block">
+                    <span class="opener plus"></span>
+                    <h3 class="head-three">Contact us</h3>
+                    <div class="contact-box footer-block-contant">
+                              <ul>
+                                <li>
+                                  <div class="contact-thumb">
+                                    <img src="images/address-icon.svg" alt="xpoge">
+                                  </div>
+                                  <div class="contact-box-detail">
+                                    <p>869 Lexington Ave, New York, NY 10065, USA</p>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="contact-thumb">
+                                    <img src="images/phone-icon.svg" alt="xpoge">
+                                  </div>
+                                  <div class="contact-box-detail">
+                                    <p>+91 123 456 789 0</p>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="contact-thumb">
+                                    <img src="images/mail-icon.svg" alt="xpoge">
+                                  </div>
+                                  <div class="contact-box-detail">
+                                    <p>xpoge@hi123.com</p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom align-center">
+            <div class="row">
+              <div class="col-12">
+                <div class="w-100">
+                  <p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://TemplatesCoder.com/" target="_blank" title="TemplatesCoder">TemplatesCoder</a></p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="social-media">
+                  <ul>
+                    <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer section end -->
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
 
 </html>

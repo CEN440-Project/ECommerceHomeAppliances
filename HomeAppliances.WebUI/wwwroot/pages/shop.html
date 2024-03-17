@@ -10,14 +10,20 @@
     <link type="image/x-icon" href="images/fav-icon.png" rel="icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="css/shoes.css">
+    <link rel="stylesheet" type="text/css" href="css/xpoge.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142494086-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-142494086-2');
+    </script>
 	</head>
 	<body>
-
 		<!-- Start preloader -->
 		<div id="preloader"></div>
 		<!-- End preloader -->
@@ -29,7 +35,7 @@
 			        <div class="search-closer right-side"></div>
 			        <div class="search-container">
 			          <form method="get" id="search-form">
-			            <input type="text" id="s" class="search-input" name="s" placeholder="Search text">
+			            <input type="text" id="s" class="search-input" name="s" placeholder="Start Searching">
 			          </form>
 			          <span>Search and Press Enter</span>
 			        </div>
@@ -38,1049 +44,1220 @@
 		</div>
 		<!-- Search Screen end -->
 
-		<div class="main" id="main">
-			<header class="header transition">
-				<div class="container position-r">
-					<div class="row">
-						<div class="col-lg-2 col-md-4 col-6 align-flax">
-				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
-					                <img alt="logo" src="images/logo.png" class="transition">
-					            </a> 
+		<div class="main">
+			<!-- Header start -->
+			<header id="header">
+				<div class="container">
+					<div class="row m-0">
+						<div class="col-lg-3 col-md-4 col-4 p-0">
+			            	<div class="navbar-header">
+				                <a class="navbar-brand page-scroll" href="index.html">
+				                	<img alt="xpoge" src="images/logo.png">
+				                </a> 
+			            	</div>
+				        </div>
+				        <div class="col-lg-9 col-md-8 col-8 p-0">
+				        	<div class="right-side">
+					        	<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle d-block d-lg-none d-xl-none" type="button"><i class="fa fa-bars"></i>
+					        	</button>
+					        	<div class="overlay"></div>
+					        	<div id="menu" class="navbar-collapse collapse" >
+					                <ul class="nav navbar-nav">
+						                <li class="level">
+						                  	<a href="index.html" class="nav-link">Home</a>
+						                </li>
+						                <li class="level dropdown">
+						                	<span class="opener plus"></span>
+						                  	<a href="shop.html" class="nav-link">Men</a>
+						                  	<div class="megamenu mobile-sub-menu">
+							                    <div class="megamenu-inner-top">
+							                      <ul class="sub-menu-level1">
+							                        <li class="level2 "> <a href="shop.html"><span>Men Cloths</span></a>
+							                          <ul class="sub-menu-level2">
+							                            <li class="level3"><a href="shop.html"><span>■</span>Navy Blazer</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Sport Jeans</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Sleeveless Shirt</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Trousers</a></li>
+							                          </ul>
+							                        </li>
+							                        <li class="level2"> <a href="shop.html"><span>Men Fashion</span></a>
+							                          <ul class="sub-menu-level2 ">
+							                            <li class="level3"><a href="shop.html"><span>■</span>Purse</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Sport Shoes</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Wallets</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Belt</a></li>
+							                          </ul>
+							                        </li>
+							                        <li class="level2"> <a href="shop.html"><span>Accessories</span></a>
+							                          <ul class="sub-menu-level2 ">
+							                            <li class="level3"><a href="shop.html"><span>■</span>Sunglasses</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Pocket Watch</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Gloves</a></li>
+							                            <li class="level3"><a href="shop.html"><span>■</span>Socks</a></li>
+							                          </ul>
+							                        </li>
+							                      </ul>
+							                    </div>
+							                </div>
+						                </li>
+						                <li class="level">
+						                  	<a href="shop.html" class="nav-link">Women</a>
+						                </li>
+						                <li class="level">
+						                  	<a href="shop.html" class="nav-link">Juniors</a>
+						                </li>
+						                <li class="level dropdown">
+						                	<span class="opener plus"></span>
+						                  	<a href="blog-left-col.html">Blog</a>
+						                  	<div class="megamenu mobile-sub-menu">
+							                    <div class="megamenu-inner-top">
+							                      <ul class="sub-menu-level1">
+							                        <li class="level2 ">
+							                        	<ul class="sub-menu-level2">
+								                            <li class="level3"><a href="blog-left-col.html"><span>■</span>Blog Left-Sidebar</a></li>
+								                            <li class="level3"><a href="blog-right-col.html"><span>■</span>Blog Right-Sidebar</a></li>
+								                            <li class="level3"><a href="blog-detail.html"><span>■</span>Singal Blog</a></li>
+								                        </ul>
+							                        </li>
+							                      </ul>
+							                    </div>
+							                </div>
+						                </li>
+						                <li class="level dropdown">
+						                	<span class="opener plus"></span>
+						                  	<a href="#" class="nav-link">Pages</a>
+						                  	<div class="megamenu mobile-sub-menu">
+							                    <div class="megamenu-inner-top">
+							                      <ul class="sub-menu-level1">
+							                        <li class="level2 ">
+							                        	<ul class="sub-menu-level2">
+								                            <li class="level3"><a href="contact.html"><span>■</span>Contact</a></li>
+								                            <li class="level3"><a href="checkout.html"><span>■</span>Checkout</a></li>
+								                            <li class="level3"><a href="wishlist.html"><span>■</span>Wishlist</a></li>
+								                            <li class="level3"><a href="404.html"><span>■</span>404</a></li>
+								                        </ul>
+							                        </li>
+							                      </ul>
+							                    </div>
+							                </div>
+						                </li>
+					                </ul>
+					            </div>
+					            <div class="header-right-link">
+					              <ul>
+					                <li class="search-box">
+					                  <a href="#"><span></span></a>
+					                </li>
+					                <li class="account-icon"> 
+					                	<a href="#"><span></span></a>
+						                <div class="header-link-dropdown account-link-dropdown">
+						                    <ul class="link-dropdown-list">
+						                      <li> <span class="dropdown-title">Default welcome msg!</span>
+						                        <ul>
+						                          <li><a href="login.html">Sign In</a></li>
+						                          <li><a href="register.html">Create an Account</a></li>
+						                        </ul>
+						                      </li>
+						                      <li> <span class="dropdown-title">Language :</span>
+						                        <ul>
+						                          <li><a class="active" href="#">English</a></li>
+						                          <li><a href="#">French</a></li>
+						                          <li><a href="#">German</a></li>
+						                        </ul>
+						                      </li>
+						                      <li> <span class="dropdown-title">Currency :</span>
+						                        <ul>
+						                          <li><a class="active" href="#">USD</a></li>
+						                          <li><a href="#">AUD</a></li>
+						                          <li><a href="#">EUR</a></li>
+						                        </ul>
+						                      </li>
+						                    </ul>
+						                </div>
+					                </li>
+					                <li class="cart-icon"> 
+					                	<a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+										<div class="cart-dropdown header-link-dropdown">
+											<ul class="cart-list link-dropdown-list">
+											  <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+											    <figure> <a href="product-page.html" class="pull-left"> <img alt="Xpoge" src="images/1.jpg"></a>
+											      <figcaption> <span><a href="product-page.html">Men's Full Sleeves Collar Shirt</a></span>
+											        <p class="cart-price">$14.99</p>
+											        <div class="product-qty">
+											          <label>Qty:</label>
+											          <div class="custom-qty">
+											            <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+											          </div>
+											        </div>
+											      </figcaption>
+											    </figure>
+											  </li>
+											  <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+											    <figure> <a href="product-page.html" class="pull-left"> <img alt="Xpoge" src="images/2.jpg"></a>
+											      <figcaption> <span><a href="product-page.html">Women's Cape Jacket</a></span>
+											        <p class="cart-price">$14.99</p>
+											        <div class="product-qty">
+											          <label>Qty:</label>
+											          <div class="custom-qty">
+											            <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+											          </div>
+											        </div>
+											      </figcaption>
+											    </figure>
+											  </li>
+											</ul>
+											<p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
+											<div class="clearfix"></div>
+											<div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+										</div>
+					                </li>
+					              </ul>
+					            </div>
 				            </div>
-					    </div>
-					    <div class="col-lg-10 col-md-8 col-6 position-i">
-					       	<div class="menu-left transition">
-						        <div class="menu" >
-						            <ul>
-							            <li>
-							                <a href="index.html">Home</a>
-							            </li>
-							            <li class="dropdown">
-							            	<span class="opener plus"></span>
-							                <a href="shop.html">Pages</a>
-							                <div class="megamenu">
-							                	<div class="megamenu-inner">
-							                		<ul>
-							                			<li><a href="about.html">About Us</a></li>
-									                    <li><a href="shop-list.html">Shop List</a></li>
-									                    <li><a href="product-detail.html">Product Detail</a></li>
-									                    <li><a href="wishlist.html">Wishlist</a></li>
-									                    <li><a href="404.html">404</a></li>
-									                </ul>
-							                	</div>
-							                </div>
-							            </li>
-							            <li class="dropdown">
-							            	<span class="opener plus"></span>
-							                <a href="shop.html">Shop</a>
-							                <div class="megamenu full">
-							                	<div class="megamenu-inner">
-							                		<div class="row">
-							                			<div class="col-xl-3 col-lg-3 col-md-3 display-nr">
-							                				<div class="shop-img-in">
-							                					<div class="row">
-							                						<div class="col-xl-12 col-lg-12 col-md-12 pb-10">
-							                							<a href="product-detail.html" class="img-drop-bottom">
-							                								<img src="images/menu.jpg" class="transition" alt="img">
-							                							</a>
-							                						</div>
-							                					</div>
-							                				</div>
-							                			</div>
-							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Chap Shoes</a>
-							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                        </ul>
-							                			</div>
-							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Fashion Shoes</a>
-							                				<ul>
-									                            <li><a href="shop.html">Opinga</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                            <li><a href="shop.html">Driving Moccasins</a></li>
-									                            <li><a href="shop.html">High Heeled</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                        </ul>
-							                			</div>
-							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Product Types</a>
-							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                        </ul>
-							                			</div>
-							                		</div>
-							                	</div>
-							                </div>
-							            </li>
-							            <li class="dropdown">
-							            	<span class="opener plus"></span>
-							                <a href="blog-left.html">Blog</a>
-							                <div class="megamenu">
-							                	<div class="megamenu-inner">
-							                		<ul>
-									                    <li><a href="blog-left.html">Blog Left</a></li>
-									                    <li><a href="blog-right.html">Blog Right</a></li>
-									                    <li><a href="blog-detail.html">Blog Detail</a></li>
-									                </ul>
-							                	</div>
-							                </div>
-							            </li>
-							            <li>
-							                <a href="contact.html">Contact</a>
-							            </li>
-						            </ul>
-						        </div>
-					        </div>
-					        <div class="search-right">
-					        	<div class="menu-toggle"><span></span></div>
-					        	<div class="search-menu">
-						        	<input type="text" name="search" class="search-input" placeholder="Search text">
-						        	<input type="submit" name="submit" class="search-btn">
-						        	<div class="search-button-i transition">
-						        		<img src="images/search.png" class="position-r transition" alt="search">
-						        	</div>
-						        </div>
-						        <ul class="login-cart">
-						        	<li>
-						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-								        </div>
-						        	</li>
-						        	<li>
-						        		<div class="cart-menu">
-								        	<div class="cart-icon position-r">
-								        		<img src="images/car-icon-w.png" class="position-r transition" alt="cart">
-								        	</div>
-								        	<div class="cart-dropdown header-link-dropdown">
-												<ul class="cart-list link-dropdown-list">
-													<li> 
-													  	<a href="javascript:void(0)" class="close-cart"><i class="fa fa-times-circle"></i></a>
-													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
-													    		<img alt="product" src="images/product-1.jpg">
-													    	</a>
-													      	<figcaption> 
-													      		<span>
-													      			<a href="product-detail.html">Men's Full Sleeves Collar Shirt</a>
-													      		</span>
-													        	<p class="cart-price">$14.99</p>
-													        	<div class="product-qty">
-													          		<label>Qty:</label>
-													          		<div class="custom-qty">
-													            		<input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
-													          		</div>
-													        	</div>
-													      	</figcaption>
-													    </figure>
-													</li>
-													<li> 
-														<a class="close-cart"><i class="fa fa-times-circle"></i></a>
-													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
-													    		<img alt="product" src="images/product-2.jpg">
-													    	</a>
-													      	<figcaption> 
-													      		<span>
-													      			<a href="product-detail.html">Women's Cape Jacket</a>
-													      		</span>
-													        	<p class="cart-price">$14.99</p>
-													        	<div class="product-qty">
-													          		<label>Qty:</label>
-													          		<div class="custom-qty">
-													            		<input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
-													          		</div>
-													        	</div>
-													      	</figcaption>
-													    </figure>
-													</li>
-												</ul>
-												<p class="cart-sub-totle"> 
-													<span class="pull-left">Cart Subtotal</span> 
-													<span class="pull-right"><strong class="price-box">$29.98</strong></span> 
-												</p>
-												<div class="clearfix"></div>
-												<div class="mt-20"> 
-													<a href="cart.html" class="btn">Cart</a> 
-													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
-												</div>
-											</div>
-								        </div>
-						        	</li>
-						        </ul>
-					        </div>
-					    </div>
+				        </div>
 					</div>
 				</div>
 			</header>
+			<!-- Header end -->
 
-			<section class="page-banner">
-				<div class="container">
-					<div class="page-banner-in">
-						<div class="row">
-							<div class="col-xl-6 col-lg-6 col-12">
-								<h1 class="page-banner-title text-uppercase">Shop</h1>
-							</div>
-							<div class="col-xl-6 col-lg-6 col-12">
-								<ul class="right-side">
-									<li><a href="index.html">Home</a></li>
-									<li>Shop</li>
-								</ul>
-							</div>
-						</div>
+			<!-- Product list contant start -->
+			<div class="contant">
+				<div id="banner-part" class="banner inner-banner">
+					<div class="container">
+						<div class="bread-crumb-main">
+							<h1 class="banner-title">Shop</h1>
+							<div class="breadcrumb">
+			                    <ul class="inline">
+			                        <li><a href="index.html">Home</a></li>
+			                        <li>Shop</li>
+			                    </ul>
+			                </div>
+		                </div>
 					</div>
 				</div>
-			</section>
-
-			<section class="product-list">
-				<div class="container">
-					<div class="row pt-100">
-						<div class="col-xl-3 col-lg-4 col-12">
-							<div class="sidebar">
-								<div class="sidebar-default mb-30">
-									<div class="category-content">
-										<h2 class="cat-title text-uppercase">women</h2>
-										<ul class="category category-drop-down">
-											<li>
-												<span class="opener plus"></span>
-												<a href="javascript:void(0)">Top</a>
-												<ul class="category-sub">
-													<li><a href="#">Mid Waterproof</a></li>
-													<li><a href="#">Brogue shoe</a></li>
-													<li><a href="#">Firecamp</a></li>
-													<li><a href="#">Forclaz</a></li>
-												</ul>
-											</li>
-											<li>
-												<span class="opener plus"></span>
-												<a href="javascript:void(0)">Dresses</a>
-												<ul class="category-sub">
-													<li><a href="#">Mid Waterproof</a></li>
-													<li><a href="#">Brogue shoe</a></li>
-													<li><a href="#">Firecamp</a></li>
-													<li><a href="#">Forclaz</a></li>
-												</ul>
-											</li>
-											<li>
-												<span class="opener plus"></span>
-												<a href="javascript:void(0)">Celebrities dress</a>
-												<ul class="category-sub">
-													<li><a href="#">Mid Waterproof</a></li>
-													<li><a href="#">Brogue shoe</a></li>
-													<li><a href="#">Firecamp</a></li>
-													<li><a href="#">Forclaz</a></li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="sidebar-default mb-30">
-									<div class="category-content">
-										<h2 class="cat-title text-uppercase">Filter By</h2>
-										<a class="btn small btn-filter" href="#">
-											<i class="fa fa-close"></i><span>Clear all</span>
-										</a>
-									</div>
-									<div class="category-content filter-by">
-										<h2 class="cat-title text-uppercase">Categories</h2>
-										<ul class="category">
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Tops" name="Tops">
-													<label for="Tops">Tops (08)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Dresses" name="Dresses">
-													<label for="Dresses">Dresses (10)</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="category-content filter-by">
-										<h2 class="cat-title text-uppercase">Size</h2>
-										<ul class="category">
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="s1" name="s">
-													<label for="s1">S</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="m" name="m">
-													<label for="m">M</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="l" name="l">
-													<label for="l">L</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="category-content filter-by">
-										<h2 class="cat-title text-uppercase">Color</h2>
-										<ul class="category">
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Beige" name="Beige">
-													<label for="Beige" class="beige">Beige (1)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="White" name="White">
-													<label for="White" class="white">White (2)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Black" name="Black">
-													<label for="Black" class="black">Black (2)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Orange" name="Orange">
-													<label for="Orange" class="orange">Orange (3)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Blue" name="Blue">
-													<label for="Blue" class="blue">Blue (2)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Green" name="Green">
-													<label for="Green" class="green">Green (1)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Yellow" name="Yellow">
-													<label for="Yellow" class="yellow">Yellow (3)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Pink" name="Pink">
-													<label for="Pink" class="pink">Pink (1)</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="category-content filter-by">
-										<h2 class="cat-title text-uppercase">Styles</h2>
-										<ul class="category">
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Casual" name="Casual">
-													<label for="Casual">Casual (9)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Dressy" name="Dressy">
-													<label for="Dressy">Dressy (1)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Girly" name="Girly">
-													<label for="Girly">Girly (3)</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="category-content filter-by">
-										<h2 class="cat-title text-uppercase">Compositions</h2>
-										<ul class="category">
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Cotton" name="Cotton">
-													<label for="Cotton">Cotton (8)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="Viscose" name="Viscose">
-													<label for="Viscose">Viscose (1)</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="category-content filter-by">
-										<h2 class="cat-title text-uppercase">Price</h2>
-										<ul class="category">
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_1" name="Cotton">
-													<label for="price_1">$68.00 - $72.00 (2)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_2" name="Cotton">
-													<label for="price_2">$86.00 - $89.00 (1)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_3" name="Cotton">
-													<label for="price_3">$99.00 - $103.00 (3)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_4" name="Cotton">
-													<label for="price_4">$104.00 - $108.00 (2)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_5" name="Cotton">
-													<label for="price_5">$109.00 - $113.00 (1)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_6" name="Cotton">
-													<label for="price_6">$126.00 - $135.00 (2)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_7" name="Cotton">
-													<label for="price_7">$209.00 - $217.00 (3)</label>
-												</div>
-											</li>
-											<li>
-												<div class="check-box">
-													<input type="checkbox" class="checkbox" id="price_8" name="Cotton">
-													<label for="price_8">$309.00 - $321.00 (1)</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="sidebar-default">
-									<div class="category-content">
-										<h2 class="cat-title latest-prod text-uppercase">Latest products</h2>
-										<div class="seller">
-											<div class="seller-box align-flax w-100 pb-10">
-												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-1.jpg" alt="shoes" class="transition">
-													</a>
-												</div>
-												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-													<span class="product-pricce">$478.00</span>
-												</div>
-											</div>
-											<div class="seller-box align-flax w-100 pb-10">
-												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-7.jpg" alt="shoes" class="transition">
-													</a>
-												</div>
-												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">BUSCIPIT AT MAGNA</a>
-													<span class="product-pricce">$478.00</span>
-												</div>
-											</div>
-											<div class="seller-box align-flax w-100 pb-10">
-												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-3.jpg" alt="shoes" class="transition">
-												</a>
-												</div>
-												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
-													<span class="product-pricce">$478.00</span>
-												</div>
-											</div>
-											<div class="seller-box align-flax w-100">
-												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-1.jpg" alt="shoes" class="transition">
-													</a>
-												</div>
-												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-													<span class="product-pricce">$478.00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+				<div class="ptb-100">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-lg-4 col-xl-3">
+								<div class="sidebar mb-md-30">
+	                                <div class="sidebar-category sidebar-default">
+	                                    <div class="category-content">
+                                            <h2 class="cat-title">Categories</h2>
+                                            <ul class="pl-0 mb-0">
+                                                <li><a href="#">Men</a></li>
+                                                <li><a href="#">Women</a></li>
+                                                <li><a href="#">Juniors</a></li>
+                                                <li><a href="#">Accessories</a></li>
+                                            </ul>
+	                                    </div>
+	                                </div>
+	                                <div class="sidebar-default">
+	                                    <div class="category-content">
+	                                        <h2 class="cat-title">Filter By</h2>
+	                                        <a class="btn btn-color small btn-filter mb-20" href="#"><i class="fa fa-close"></i><span>Clear all</span></a>
+	                                        <div class="mb-20">
+						                    	<div class="inner-title">Types</div>
+							                    <ul>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="type1" name="type1">
+							                              <label for="type1">Top <span>(05)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="type2" name="type2">
+							                              <label for="type2">T-shirt <span>(02)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="type3" name="type3">
+							                              <label for="type3">Shirt <span>(07)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="type4" name="type4">
+							                              <label for="type4">Jeans <span>(03)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                    </ul>
+						                    </div>
+						                    <div class="mb-20">
+						                    	<div class="inner-title">Price</div>
+							                    <ul>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="price1" name="price1">
+							                              <label for="price1">$68.00 - $72.00 <span>(02)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="price2" name="price2">
+							                              <label for="price2">$86.00 - $89.00 <span>(13)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="price3" name="price3">
+							                              <label for="price3">$99.00 - $103.00 <span>(08)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="price4" name="price4">
+							                              <label for="price4">$104.00 - $108.00 <span>(04)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="price5" name="price5">
+							                              <label for="price5">$109.00 - $113.00 <span>(09)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                    </ul>
+						                    </div>
+	                                        <div class="mb-20">
+						                    	<div class="inner-title">Brand</div>
+							                    <ul>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="brand1" name="brand1">
+							                              <label for="brand1">Puma <span>(02)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="brand2" name="brand2">
+							                              <label for="brand2">Roadster <span>(13)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="brand3" name="brand3">
+							                              <label for="brand3">Here&amp;Now <span>(08)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="brand4" name="brand4">
+							                              <label for="brand4">DressBerry <span>(04)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="brand5" name="brand5">
+							                              <label for="brand5">John Players <span>(09)</span></label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                    </ul>
+						                    </div>
+						                    <div class="">
+						                    	<div class="inner-title">Color</div>
+							                    <ul>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="color1" name="color1">
+							                              <label for="color1" class="orange">Orange</label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="color2" name="color2">
+							                              <label for="color2" class="sky-blue">Sky Blue</label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="color3" name="color3">
+							                              <label for="color3" class="black">Black</label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="color4" name="color4">
+							                              <label for="color4" class="green">Green</label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                        <li>
+							                          <div class="check-box"> 
+							                            <span>
+							                              <input type="checkbox" class="checkbox" id="color5" name="color5">
+							                              <label for="color5" class="pink">Pink</label>
+							                            </span>
+							                          </div>
+							                        </li>
+							                    </ul>
+						                    </div>
+	                                    </div>
+	                                </div>
+	                                <div class="sidebar-default sidebar-banner d-none d-lg-block">
+                                		<a href="javascript:void(0)">
+                                			<img src="images/sidebar-banner.jpg" alt="Xpoge">
+                                		</a>
+	                                </div>
+	                                <div class="sidebar-default">
+	                                    <div class="sidebar-product">
+	                                        <h2 class="cat-title">Latest products</h2>
+	                                        <ul>
+								                <li>
+								                    <div class="pro-media"> <a href="product-page.html"><img alt="Xpoge" src="images/1.jpg"></a> </div>
+								                    <div class="pro-detail-info"> <a href="product-page.html" class="product-title">Women's Cotton Plain T-Shirts</a>
+								                      <div class="price-box">
+								                      	<span class="price">$65.23</span>
+								                      	<del class="price old-price">$70.00</del>
+								                      </div>
+								                      <div class="cart-link">
+								                        <form>
+								                          <button title="Add to Cart">Add To Cart</button>
+								                        </form>
+								                      </div>
+								                    </div>
+								                </li>
+								                <li>
+								                    <div class="pro-media"> <a href="product-page.html"><img alt="T-shirt" src="images/2.jpg"></a> </div>
+								                    <div class="pro-detail-info"> <a href="product-page.html" class="product-title">Men's Printed Regular Shirt</a>
+								                      <div class="price-box"> <span class="price">$80.00</span> </div>
+								                      <div class="cart-link">
+								                        <form>
+								                          <button title="Add to Cart">Add To Cart</button>
+								                        </form>
+								                      </div>
+								                    </div>
+								                </li>
+								                <li>
+								                    <div class="pro-media"> <a href="product-page.html"><img alt="T-shirt" src="images/3.jpg"></a> </div>
+								                    <div class="pro-detail-info"> <a href="product-page.html" class="product-title">Black African Print</a>
+								                      <div class="price-box"> <span class="price">$80.00</span> </div>
+								                      <div class="cart-link">
+								                        <form>
+								                          <button title="Add to Cart">Add To Cart</button>
+								                        </form>
+								                      </div>
+								                    </div>
+								                </li>
+							                </ul>
+	                                    </div>
+	                                </div>
+		                        </div>
 							</div>
-						</div>
-						<div class="col-xl-9 col-lg-8 col-12">
-							<div class="shorting mb-30">
-						        <div class="row align-flax">
-						            <div class="col-xl-6 col-lg-5 col-md-6 mb-r-15">
+							<div class="col-12 col-lg-8 col-xl-9">
+								<div class="shorting mb-30">
+						            <div class="row">
+						              <div class="col-lg-6">
 						                <div class="view">
-						                  	<div class="list-types grid active"> 
-						                  		<a href="shop.html">
-						                    		<div class="grid-icon list-types-icon">
-						                    			<i class="fa fa-th-large transition" aria-hidden="true"></i>
-						                    		</div>
-						                    	</a> 
-						                    </div>
-						                  	<div class="list-types list"> 
-						                  		<a href="shop-list.html">
-						                    		<div class="list-icon list-types-icon">
-						                    			<i class="fa fa-bars transition" aria-hidden="true"></i>
-						                    		</div>
-						                    	</a> 
-						                    </div>
+						                  <div class="list-types grid active "> <a href="shop.html">
+						                    <div class="grid-icon list-types-icon"></div>
+						                    </a> </div>
+						                  <div class="list-types list"> <a href="shop-list.html">
+						                    <div class="list-icon list-types-icon"></div>
+						                    </a> </div>
 						                </div>
-						                <div class="short-by"> <span>Product Compare (0)</span>
+						                <div class="short-by float-right-md"> <span>Sort By</span>
+						                  <div class="select-item">
+						                    <select>
+						                      <option value="" selected="selected">Name (A to Z)</option>
+						                      <option value="">Name(Z - A)</option>
+						                      <option value="">price(low&gt;high)</option>
+						                      <option value="">price(high &gt; low)</option>
+						                      <option value="">rating(highest)</option>
+						                      <option value="">rating(lowest)</option>
+						                    </select>
+						                  </div>
 						                </div>
-						            </div>
-						            <div class="col-xl-6 col-lg-7 col-md-6 text-right text-left-md">
-						                <div class="show-item"> 
-						                	<span class="ml-0">Sort By:</span>
-						                  	<div class="select-item">
-						                    	<select class="m-w-130">
-						                      		<option value="" selected="selected">Default sorting</option>
-						                      		<option value="">Sort by popularity</option>
-						                      		<option value="">Sort by average rating</option>
-						                    	</select>
-						                  	</div>
+						              </div>
+						              <div class="col-lg-6">
+						                <div class="show-item right-side float-left-md"> <span>Show</span>
+						                  <div class="select-item">
+						                    <select>
+						                      <option value="" selected="selected">24</option>
+						                      <option value="">12</option>
+						                      <option value="">6</option>
+						                    </select>
+						                  </div>
+						                  <span>Per Page</span>
+						                  <div class="compare float-right-sm"> <a href="#" class="btn btn-color">Compare (0)</a> </div>
 						                </div>
-						                <div class="show-item float-right-md"> 
-						                	<span>Show</span>
-						                  	<div class="select-item">
-						                    	<select>
-						                      		<option value="" selected="selected">15</option>
-						                      		<option value="">12</option>
-						                      		<option value="">6</option>
-						                    	</select>
-						                  	</div>
-						                </div>
+						              </div>
 						            </div>
 						        </div>
-						   	</div>
-							<div class="featured">
-								<div class="row">
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-1.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-2.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN EU TRISTIQUE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-3.jpg" alt="product" class="transition">
-											</a>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-4.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc" data-category="accessories">
-											<a href="product-detail.html" class="product-name text-uppercase">ALIQUAM LOBORTIS EST</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-5.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AUCTOR GRAVIDA ENIM</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-6.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BLIQUAM LOBORTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-7.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BUSCIPIT AT MAGNA</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-8.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">CONDIMENTUM POSUERE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-9.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">DIGNISSIM VENENATIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-10.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">ELEIFEND ARCU</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-1.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-2.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN EU TRISTIQUE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-3.jpg" alt="product" class="transition">
-											</a>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-4.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc" data-category="accessories">
-											<a href="product-detail.html" class="product-name text-uppercase">ALIQUAM LOBORTIS EST</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-5.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AUCTOR GRAVIDA ENIM</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-6.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BLIQUAM LOBORTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-7.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BUSCIPIT AT MAGNA</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-8.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">CONDIMENTUM POSUERE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-9.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">DIGNISSIM VENENATIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-10.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">ELEIFEND ARCU</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-1.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-2.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN EU TRISTIQUE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-3.jpg" alt="product" class="transition">
-											</a>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-4.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc" data-category="accessories">
-											<a href="product-detail.html" class="product-name text-uppercase">ALIQUAM LOBORTIS EST</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
+								<div class="product-section grid-view">
+									<div class="row">
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<div class="sale-label"><span>Sale</span></div>
+					                				<a href="product-page.html">
+						                				<img src="images/1.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Men's Full Sleeves Collar Shirt</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$95.50</span>
+						                					<del class="price old-price">$100.00</del>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/2.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Women's Cape Jacket</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$30.22</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+	                								<div class="new-label"><span>New</span></div>
+					                				<a href="product-page.html">
+						                				<img src="images/3.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Men's Regular Fit T-Shirt</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$56.00</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/4.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Women's Cotton Plain T-Shirts</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$65.23</span>
+						                					<del class="price old-price">$70.00</del>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/5.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Men's Printed Regular Shirt</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$45.25</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+						                			<div class="sale-label"><span>Sale</span></div>
+		                							<div class="new-label"><span>New</span></div>
+					                				<a href="product-page.html">
+						                				<img src="images/6.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Polyester Printed T-Shirts</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$88.54</span>
+						                					<del class="price old-price">$100.00</del>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+						                			<div class="sale-label"><span>Sale</span></div>
+		                							<div class="new-label"><span>New</span></div>
+					                				<a href="product-page.html">
+						                				<img src="images/7.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Excalibur Men's Slim Formal Trousers</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$68.55</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/8.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">A-Line Dress for Women's</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$77.54</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/9.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Women’s Summer dress</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$55.88</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/10.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Women’s winter dress</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$55.88</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/11.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Cold Sleeve Skater Dress</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$68.00</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/12.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Cotton Tshirt's Women’s</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$46.55</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/4.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Women's Cotton Plain T-Shirts</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$65.23</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+					                				<a href="product-page.html">
+						                				<img src="images/5.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Men's Printed Regular Shirt</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$45.25</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                	<div class="col-lg-4 col-md-4 col-6">
+					                		<div class="product-item">
+					                			<div class="product-image">
+						                			<div class="sale-label"><span>Sale</span></div>
+		                							<div class="new-label"><span>New</span></div>
+					                				<a href="product-page.html">
+						                				<img src="images/6.jpg" alt="Xpoge">
+						                			</a>
+					                			</div>
+					                			<div class="product-details-outer">
+						                			<div class="product-details">
+						                				<div class="product-title">
+						                					<a href="product-page.html">Polyester Printed T-Shirts</a>
+						                				</div>
+						                				<div class="price-box">
+						                					<span class="price">$88.54</span>
+						                				</div>
+						                			</div>
+						                			<div class="product-details-btn">
+						                				<ul>
+						                					<li class="icon cart-icon">
+						                						<a href="cart.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon wishlist-icon">
+						                						<a href="wishlist.html">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                					<li class="icon compare-icon">
+						                						<a href="#">
+						                							<span></span>
+						                						</a>
+						                					</li>
+						                				</ul>
+						                			</div>
+					                			</div>
+					                		</div>
+					                	</div>
+					                </div>
 								</div>
-							</div>
-							<div class="shorting pagination-1 mt-20">
-						        <div class="row">
-						            <div class="col-lg-6 col-md-6">
+								<div class="shorting center-md">
+						            <div class="row">
+						              <div class="col-lg-6">
 						                <div class="pagination-bar">
-					                      	<ul>
-					                        	<li class="active"><a href="#">1</a></li>
-					                        	<li><a href="#">2</a></li>
-					                        	<li><a href="#">3</a></li>
-					                        	<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-					                      	</ul>
-					                    	</div>
-						              	</div>
-						            <div class="col-lg-6 col-md-6">
+					                      <ul>
+					                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+					                        <li class="active"><a href="#">1</a></li>
+					                        <li><a href="#">2</a></li>
+					                        <li><a href="#">3</a></li>
+					                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+					                      </ul>
+					                    </div>
+						              </div>
+						              <div class="col-lg-6">
 						                <div class="show-item right-side float-none-md"> 
 						                	<span class="float-none-md d-block">Showing 1 to 15 of 15 (1 Pages)</span>
 						                </div>
+						              </div>
 						            </div>
 						        </div>
-						    </div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-
-			<section class="newsletter pt-100">
-				<div class="container">
-					<div class="newsletter-inner text-center ptb-100">
-						<h2 class="newsletter-title">Sign up for Newsletter</h2>
-						<p class="newsletter-sub">Wants to get latest updates! sign up for Free</p>
-						<form>
-						  <div class="form-group">
-						    <input type="email" class="form-control" placeholder="Your email address" required>
-						  </div>
-						  <button type="submit" class="form-btn text-uppercase">
-							<span class="sub-r">Subscribe</span> 
-							<i class="fa fa-send icon-r"></i>
-						</button>
-						</form>
-					</div>
-				</div>
-			</section>
-
-			<div class="top-scrolling">
-				<a href="#main" class="scrollTo"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 			</div>
+			<!-- Product list contant end -->
 
-			<footer class="footer pt-100">
+			<!-- Newslatter section start -->
+			<section class="newsletter-section align-center ptb-100">
+	            <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-lg-9 col-12">
+                            <div class="newsletter-title">
+                                <h2 class="main_title">Sign up for Newsletter </h2>
+                                <p>Wants to get latest updates! sign up for Free </p>
+                            </div>
+                            <div class="newsletter-input">
+                                <form>
+                                    <div class="form-group m-0">
+                                        <input type="email" placeholder="Your email address" required="">
+                                    </div>
+                                    <button type="submit" class="btn btn-color"><span class="d-none d-sm-block">Subscribe</span> <i class="fa fa-send d-block d-sm-none"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	        </section>
+	        <!-- Newslatter section end -->
+
+			<!-- Footer section start -->
+			<footer class="footer-part">
 				<div class="container">
-					<div class="footer-inner">
-						<div class="footer-box">
-							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+					<div class="footer-top ptb-100">
+						<div class="mb_-30">
+							<div class="row">
+								<div class="col-12 col-lg-3 col-md-6">
+									<div class="footer-about mb-sm-30">
+										<div class="footer-logo">
+											<a href="index.html">
+												<img src="images/logo.png" alt="logo">
+											</a>
+										</div>
+										<p class="footer-p">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh mauris sit amet nibh. Donec sodales sagittis</p>
+									</div>
+								</div>
+								<div class="col-12 col-lg-3 col-md-6">
+									<div class="footer-static-block">
+										<span class="opener plus"></span>
+										<h3 class="head-three">Information</h3>
+										<ul class="footer-menu footer-block-contant">
+											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="javascript:void(0)">Brands</a></li>
+											<li><a href="blog-left-col.html">Blog</a></li>
+											<li><a href="javascript:void(0)">Returns</a></li>
+											<li><a href="javascript:void(0)">Privacy Policy</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-12 col-lg-3 col-md-6">
+									<div class="footer-static-block">
+										<span class="opener plus"></span>
+										<h3 class="head-three">My Account</h3>
+										<ul class="footer-menu footer-block-contant">
+											<li><a href="javascript:void(0)">Order History</a></li>
+											<li><a href="wishlist.html">Wish List</a></li>
+											<li><a href="javascript:void(0)">Newsletter</a></li>
+											<li><a href="javascript:void(0)">Specials</a></li>
+											<li><a href="javascript:void(0)">Gift Certificates</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-12 col-lg-3 col-md-6">
+									<div class="footer-static-block">
+										<span class="opener plus"></span>
+										<h3 class="head-three">Contact us</h3>
+										<div class="contact-box footer-block-contant">
+				                			<ul>
+				                				<li>
+				                					<div class="contact-thumb">
+				                						<img src="images/address-icon.svg" alt="xpoge">
+				                					</div>
+				                					<div class="contact-box-detail">
+				                						<p>869 Lexington Ave, New York, NY 10065, USA</p>
+				                					</div>
+				                				</li>
+				                				<li>
+				                					<div class="contact-thumb">
+				                						<img src="images/phone-icon.svg" alt="xpoge">
+				                					</div>
+				                					<div class="contact-box-detail">
+				                						<p>+91 123 456 789 0</p>
+				                					</div>
+				                				</li>
+				                				<li>
+				                					<div class="contact-thumb">
+				                						<img src="images/mail-icon.svg" alt="xpoge">
+				                					</div>
+				                					<div class="contact-box-detail">
+				                						<p>xpoge@hi123.com</p>
+				                					</div>
+				                				</li>
+				                			</ul>
+				                		</div>
+				                	</div>
+								</div>
 							</div>
-							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
-						</div>
-						<div class="footer-box footer-static">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Our company</h2>
-							<ul class="footer-block-contant">
-								<li><a href="#">My Account</a></li>
-								<li><a href="#">Order History</a></li>
-								<li><a href="wishlist.html">Wish List</a></li>
-								<li><a href="#">Newsletter</a></li>
-								<li><a href="#">Site Map</a></li>
-								<li><a href="#">Gift Certificates</a></li>
-							</ul>
-						</div>
-						<div class="footer-box footer-static">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Information</h2>
-							<ul class="footer-block-contant">
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="#">Delivery Information</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="#">Brands</a></li>
-							</ul>
-						</div>
-						<div class="footer-box footer-static m-0">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Your Account</h2>
-							<ul class="footer-block-contant">
-								<li><a href="#">Running Shoes</a></li>
-								<li><a href="#">Football Shoes</a></li>
-								<li><a href="#">Basketball Shoes</a></li>
-								<li><a href="#">Volleyball Shoes</a></li>
-								<li><a href="#">Trainee Shoes</a></li>
-							</ul>
-						</div>
-						<div class="footer-box footer-contact footer-static m-0">
-							<span class="opener plus"></span>
-							<h2 class="footer-title text-uppercase">Contact us</h2>
-							<ul class="footer-block-contant">
-								<li><img src="images/cont-1.png" alt="img"><span>28 Green Tower, Street Name <br>New York City, USA</span></li>
-								<li><img src="images/cont-2.png" alt="img"><a href="tel:+911234567890">+ 91 123 456 789 0</a></li>
-								<li><img src="images/cont-3.png" alt="img"><a href="mailto:xpoge@example.com">xpoge@example.com</a></li>
-							</ul>
 						</div>
 					</div>
-					<div class="copy-right mt-100">
+					<div class="footer-bottom align-center">
 						<div class="row">
-							<div class="col-xl-6 col-lg-6 col-md-12">
-								<p class="copyright-text">&#169; Xpoge all Rights Reserverd theme by <a href="https://templatescoder.com/" target="_blank">TemplatesCoder</a></p>
+							<div class="col-12">
+								<div class="w-100">
+									<p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://TemplatesCoder.com/" target="_blank" title="TemplatesCoder">TemplatesCoder</a></p>
+								</div>
 							</div>
-							<div class="col-xl-6 col-lg-6 col-md-12">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-								</ul>
+							<div class="col-12">
+								<div class="social-media">
+									<ul>
+										<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="javascript:void(0)"><i class="fa fa-youtube"></i></a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
+			<!-- Footer section end -->
 		</div>
-	
 		<script src="js/jquery-3.4.1.min.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/custom.js"></script>
 	</body>
-
+	
 </html>

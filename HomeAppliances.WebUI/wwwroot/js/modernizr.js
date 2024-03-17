@@ -34,7 +34,7 @@
         mouseLeaveDisplayCB: function () { },
         //THUMBS AREA        
         thumbsPosition: 'bottom',   // Default position of thumbs. Position is relative to the image display. Can take the values: top; bottom      
-        nrThumbsPerRow: 4,          // Number of images per row        
+        nrThumbsPerRow: 5,          // Number of images per row        
         isThumbsOneRow: true,     // Show one row or all images: true -> will be shown only one row; false -> will be shown all images
         isOneThumbShown: false,
         firstThumbSelected: 0,          // Current element's index

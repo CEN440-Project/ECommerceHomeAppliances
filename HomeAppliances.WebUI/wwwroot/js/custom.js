@@ -1,4 +1,4 @@
-var w = 0;
+// JavaScript Document
 $(function() {
  "use strict";
     /* -------- preloader ------- */
@@ -7,7 +7,7 @@ $(function() {
     });
 
     /*------------ Sticky Header Slider ---------*/
-    $(window).scroll(function() {
+    $(window).on("scroll",function() {
         if ($(this).scrollTop() > 90){  
             $('header, .top-scrolling').addClass("sticky");
         }
@@ -167,21 +167,22 @@ $(function() {
 
     /* -------- Countdown Timer ------- */
     if ($(".countdown").length > 0) {
-        var your_date = '2020-09-28 00:00:00';
-        const second = 1000,
+        var your_date = '2021-09-28 00:00:00';
+        var second = 1000,
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
 
-        var countDown = new Date(your_date).getTime(),
-        x = setInterval(function() {    
+        var countDown = new Date(your_date.replace(/-/g, "/")).getTime();
+		
+        setInterval(function() {    
             var now = new Date().getTime(),
                 distance = countDown - now;
-                document.getElementById('days').innerText = Math.floor(distance / (day)),
-                document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-                document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById('days').innerText = Math.floor(distance / (day));
+                document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour));
+                document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute));
                 document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-        }, second)
+        }, second);
     }
 
     /* ---- For Footer JS Start ---- */
