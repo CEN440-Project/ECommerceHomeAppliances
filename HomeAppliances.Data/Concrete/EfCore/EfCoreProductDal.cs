@@ -49,7 +49,7 @@ namespace HomeAppliances.Data.Concrete.EfCore
 			{
 				return context.Products
 						.Where(i => i.CategoryID == categoryId)
-						.Include(i => i.Brand.Name)
+						.Include(i => i.Brand)
 						.ToList();
 			}
 		}

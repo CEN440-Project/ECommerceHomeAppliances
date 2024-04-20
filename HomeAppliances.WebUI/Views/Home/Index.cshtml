@@ -1,52 +1,61 @@
 ﻿@model ProductListModel
 
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'UA-142494086-2');
+</script>
+
 <section id="banner-part" class="menu-section pb-100">
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-
-			<div class="item active">
-				<img src="/images/brands/arcelik.png" alt="Los Angeles" style="width:100%;">
-				<div class="carousel-caption">
-					<h3>Los Angeles</h3>
-					<p>LA is always so much fun!</p>
+	<div class="banner main-banner owl-carousel owl-loaded owl-drag">
+		<div class="owl-stage-outer">
+			<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1706px;">
+				<div class="owl-item active" style="width: 866.4px">
+					<div class="banner-1">
+						<img src="images/banner1.jpg" alt="Xpoge">
+						<div class="banner-detail">
+							<div class="container">
+								<div class="row">
+									<div class="col-12">
+										<div class="banner-detail-inner">
+											<span class="subtitle1">Women Style</span>
+											<h1 class="banner-title">Big sale</h1>
+											<div class="subtitle2">
+												<span class="part1">Summer</span>
+												<span class="part2">Collection</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="owl-item active" style="width: 866.4px">
+					<div class="banner-2">
+						<img src="images/banner2.jpg" alt="Xpoge">
+						<div class="banner-detail">
+							<div class="container">
+								<div class="row">
+									<div class="col-12">
+										<div class="banner-detail-inner">
+											<span class="subtitle1">Up to 40% Off</span>
+											<h1 class="banner-title">Men Suit</h1>
+											<div class="subtitle2">
+												<span class="part1">New</span>
+												<span class="part2">Collection</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<div class="item">
-				<img src="/images/brands/arcelik.png" alt="Chicago" style="width:100%;">
-				<div class="carousel-caption">
-					<h3>Chicago</h3>
-					<p>Thank you, Chicago!</p>
-				</div>
-			</div>
-
-			<div class="item">
-				<img src="/images/brands/arcelik.png" alt="New York" style="width:100%;">
-				<div class="carousel-caption">
-					<h3>New York</h3>
-					<p>We love the Big Apple!</p>
-				</div>
-			</div>
-
 		</div>
-
-		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			<span class="sr-only">Next</span>
-		</a>
 	</div>
 </section>
 <!-- Banner end -->
