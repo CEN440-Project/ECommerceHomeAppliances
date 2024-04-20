@@ -10,8 +10,13 @@
 	<link type="image/x-icon" href="~/images/fav-icon.png" rel="icon">
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="~/css/style.css">
+	<link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="~/css/glass-case.css">
+	<link rel="stylesheet" type="text/css" href="~/css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="~/css/style.css">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -50,33 +55,6 @@
 	</div>
 	<!-- Search Screen end -->
 
-@* 	<div id="newslater-popup" class="mfp-hide white-popup-block open align-center">
-		<div class="nl-popup-main">
-			<div class="nl-popup-inner">
-				<div class="newsletter-inner">
-					<div class="row">
-						<div class="col-md-6"></div>
-						<div class="col-md-6">
-							<div class="mtb-30">
-								<h2 class="main_title">Subscribe Emails</h2>
-								<span class="sub-title mb-30">Sign up & get 10% off</span>
-								<form>
-									<input type="email" placeholder="Email Here...">
-									<button class="btn-color big-width btn" title="Subscribe">Subscribe</button>
-								</form>
-								<div class="check-box mt-30">
-									<span>
-										<input type="checkbox" class="checkbox" id="different-address" name="Ship to a different address?">
-										<label for="different-address">Don`t show this popup again</label>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> *@
 	<div class="main">
 		<!-- Header start -->
 		<header id="header">
@@ -165,7 +143,7 @@
 										</div>
 									</li>
 									<li class="level">
-										<a href="shop.html" class="nav-link">Tüm Ürünlerimiz</a>
+										<a href="/Shop/" class="nav-link">Tüm Ürünlerimiz</a>
 									</li>
 									<li class="level dropdown">
 										<span class="opener plus"></span>
@@ -399,22 +377,12 @@
 		</footer>
 		<!-- Footer section end -->
 	</div>
-	<script src="~/js/jquery-3.4.1.min.js"></script>
 	<script src="~/js/bootstrap.min.js"></script>
-	<script src="~/js/owl.carousel.min.js"></script>
-	<script src="~/js/jquery.magnific-popup.min.js"></script>
 	<script src="~/js/custom.js"></script>
-	<script>
-		/* ------------ Newslater-popup JS Start ------------- */
-		$(window).on('load', function () {
-			setTimeout(function () {
-				jQuery.magnificPopup.open({
-					items: { src: '#newslater-popup' }, type: 'inline'
-				}, 0);
-			}, 10000)
-		});
-		/* ------------ Newslater-popup JS End ------------- */
-	</script>
+	<script src="~/js/jquery.magnific-popup.min.js"></script>
+	<script src="~/js/jquery-3.4.1.min.js"></script>
+	<script src="~/js/owl.carousel.min.js"></script>
+	<script src="~/js/modernizr.js"></script>
 </body>
 
 </html>

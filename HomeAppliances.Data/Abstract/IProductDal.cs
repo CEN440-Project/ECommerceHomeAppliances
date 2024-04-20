@@ -10,8 +10,9 @@ namespace HomeAppliances.Data.Abstract
     public interface IProductDal : IRepository<Product>
     {
         List<Product> GetProductsByBrand(string brand, int page, int pageSize);
+		List<Product> GetProductsByCategoryId(int? categoryId);
 
-        Product GetProductDetails(int id);
+		Product GetProductDetails(int id);
 
         int GetCountByBrand(string brand);
         Product GetByIdWithBrands(int id);

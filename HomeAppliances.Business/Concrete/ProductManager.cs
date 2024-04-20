@@ -83,5 +83,10 @@ namespace HomeAppliances.Business.Concrete
 
             return isValid;
         }
-    }
+
+		public List<Product> GetProductsByCategoryId(int? categoryId)
+		{
+            return _productDal.GetProductsByCategoryId(categoryId);
+		}
+	}
 }

@@ -32,6 +32,8 @@ namespace HomeAppliances.Data.Concrete.EfCore
             {
                 return context.Products
                             .Where(i => i.ProductID == id)
+                            .Include(x => x.Brand)
+                            .Include(y => y.ProductCategory)
                             .FirstOrDefault();
             }
         }
@@ -40,5 +42,16 @@ namespace HomeAppliances.Data.Concrete.EfCore
         {
             throw new NotImplementedException();
         }
-    }
+
+		public List<Product> GetProductsByCategoryId(int? categoryId)
+		{
+			using (var context = new EfCoreContext())
+			{
+				return context.Products
+						.Where(i => i.CategoryID == categoryId)
+						.Include(i => i.Brand.Name)
+						.ToList();
+			}
+		}
+	}
 }

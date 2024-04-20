@@ -14,6 +14,7 @@ namespace HomeAppliances.Business.Abstract
         Product GetProductDetails(int id);
         List<Product> GetAll();
         List<Product> GetProductsByBrand(string brand, int page, int pageSize);
+        List<Product> GetProductsByCategoryId(int? categoryId);
 
         int GetCountByBrand(string brand);
         bool Create(Product entity);
