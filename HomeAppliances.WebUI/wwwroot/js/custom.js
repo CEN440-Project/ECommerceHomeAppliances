@@ -120,8 +120,9 @@ $(function () {
 
     if ($(".main-banner, .testimonial-slider").length > 0) {
         $(".main-banner, .testimonial-slider").owlCarousel({
-            //loop: true,
-            autoplay: false,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 7000, // sn
             dots: true,
             nav: false,
             items: 1,

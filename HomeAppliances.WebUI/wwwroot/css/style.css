@@ -706,7 +706,7 @@ table.border {
 }
 /*End*/
 
-* Slider arrow & dots start */
+/* Slider arrow & dots start */
 .owl-carousel .owl-nav button[class*="owl-"], .owl-carousel .owl-nav button[class*="owl-"].disabled:hover {
 	background: #efefef;
 	position: absolute;
@@ -1508,7 +1508,17 @@ _______________________________________________________*/
 .product-item .product-image {
 	border: 1px solid #e5e5e5;
 	position: relative;
+	height: 280px;
+	width: 260px;
 }
+
+	.product-item .product-image img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		min-height: 80%;
+		max-height: 95%;
+	}
 
 .sale-label {
     background: #f22a59 none repeat scroll 0 0;
