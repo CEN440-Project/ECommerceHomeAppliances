@@ -1,5 +1,6 @@
 ﻿using HomeAppliances.Business.Abstract;
 using HomeAppliances.Data.Abstract;
+using HomeAppliances.Data.Concrete.EfCore;
 using HomeAppliances.Entity.Concrete;
 using System;
 using System.Collections.Generic;
@@ -49,7 +50,7 @@ namespace HomeAppliances.Business.Concrete
             return _productDal.GetByIdWithBrands(id);
         }
 
-        public int GetCountByBrand(string brand)
+        public int GetCountByBrand(int brand)
         {
             return _productDal.GetCountByBrand(brand);
         }
@@ -59,7 +60,7 @@ namespace HomeAppliances.Business.Concrete
             return _productDal.GetProductDetails(id);
         }
 
-        public List<Product> GetProductsByBrand(string brand, int page, int pageSize)
+        public List<Product> GetProductsByBrand(int brand, int page, int pageSize)
         {
             return _productDal.GetProductsByBrand(brand, page, pageSize);
         }
@@ -87,6 +88,11 @@ namespace HomeAppliances.Business.Concrete
 		public List<Product> GetProductsByCategoryId(int? categoryId)
 		{
             return _productDal.GetProductsByCategoryId(categoryId);
+		}
+
+		public List<Product> GetProductsWithBrand()
+		{
+			return _productDal.GetProductsWithBrand();
 		}
 	}
 }

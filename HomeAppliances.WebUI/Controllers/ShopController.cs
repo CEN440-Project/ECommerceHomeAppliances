@@ -10,31 +10,57 @@ namespace HomeAppliances.WebUI.Controllers
     {
         private IProductService _productService;
         private ICategoryDal _categoryService;
+		private IBrandDal _brandService;
 
-		public ShopController(IProductService productService, ICategoryDal categoryService)
+
+		public ShopController(IProductService productService, ICategoryDal categoryService, IBrandDal brandService)
 		{
 			_productService = productService;
 			_categoryService = categoryService;
+			_brandService = brandService;
 		}
 
-		public IActionResult Index(int? id)
+		[Route("Shop/Index/{ProductCategory?}/{brand?}")]
+		public IActionResult Index(int? ProductCategory, string? brand)
         {
-            if (!(id == null))
+			ProductListModel model = new ProductListModel();
+
+			if ((ProductCategory != null) && (brand != null))
             {
-				return View(new ProductListModel()
-				{
-					Products = _productService.GetProductsByCategoryId(id),
-					SelectedCategory = RouteData.Values["category"]?.ToString(),
-					ProductCategories = _categoryService.GetAll()
-				});
+				model.Products = _productService.GetProductsByCategoryId(ProductCategory)
+					.Where(i => i.Brand.Name.ToLower() == brand.ToLower())
+					.ToList();
+				model.Brands = _brandService.GetAll();
+				model.ProductCategories = _categoryService.GetAll();
+
+
+				return View(model);
 			}
-            else 
+			else if((ProductCategory == null) && (brand != null))
+			{
+				model.Products = _productService.GetProductsWithBrand()
+					.Where(i => i.Brand.Name.ToLower() == brand.ToLower())
+					.ToList();
+				model.Brands = _brandService.GetAll();
+				model.ProductCategories = _categoryService.GetAll();
+
+				return View(model);
+			}
+			else if ((ProductCategory != null) && (brand == null))
+			{
+				model.Products = _productService.GetProductsByCategoryId(ProductCategory);
+				model.Brands = _brandService.GetAll();
+				model.ProductCategories = _categoryService.GetAll();
+
+				return View(model);
+			}
+			else 
             {
-				return View(new ProductListModel()
-				{
-					Products = _productService.GetAll(),
-					ProductCategories = _categoryService.GetAll()
-				});
+				model.Products = _productService.GetAll();
+				model.Brands = _brandService.GetAll();
+				model.ProductCategories = _categoryService.GetAll();
+				
+				return View(model);
 			}
         }
 		public IActionResult Detail(int id)

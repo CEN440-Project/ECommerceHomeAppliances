@@ -6,6 +6,7 @@ namespace HomeAppliances.WebUI.Models
     {
         public List<Product> Products { get; set; }
         public List<ProductCategory> ProductCategories { get; set; }
+		public List<Brand> Brands { get; set; }
 		public string SelectedCategory { get; set; }
 	}
 }

@@ -12,7 +12,8 @@ namespace HomeAppliances.Data.Concrete.EfCore
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-4M0OQRD\SQLEXPRESS;Database=HomeApplianceDB;User Id=pixxaer;Password=453885;Encrypt=false;TrustServerCertificate=true;");
+            //optionsBuilder.UseSqlServer(@"Server=DESKTOP-4M0OQRD\SQLEXPRESS;Database=HomeApplianceDB;User Id=pixxaer;Password=453885;Encrypt=false;TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer(@"Server=ANIL\SQLEXPRESS;Database=HomeApplianceDB;Trusted_Connection=True;TrustServerCertificate=True");
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Brand> Brands { get; set; }

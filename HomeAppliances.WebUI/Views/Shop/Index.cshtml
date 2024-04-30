@@ -1,5 +1,6 @@
 ﻿@model ProductListModel
 
+
 <!-- Product list contant start -->
 <div class="contant">
 	<div id="banner-part" class="banner inner-banner">
@@ -32,12 +33,10 @@
 											Tüm Ürünler
 										</a>
 									</li>
-									@foreach(var item in Model.ProductCategories)
+									@foreach(var item in Model.Brands)
 									{
 										<li>
-											<a asp-controller="Shop"
-											   asp-action="Index"
-											   asp-route-id="@item.ProductCategoryID"
+											<a href="@currentUrl/@item.Name"
 											   class="list-group-item list-group-item-action @(Model.SelectedCategory==item.Name.ToLower()?"active":"")">
 												@item.Name
 											</a>

@@ -22,7 +22,7 @@ namespace HomeAppliances.Data.Concrete.EfCore
             }
         }
 
-        public int GetCountByBrand(string brand)
+        public int GetCountByBrand(int brand)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@ namespace HomeAppliances.Data.Concrete.EfCore
             }
         }
 
-        public List<Product> GetProductsByBrand(string brand, int page, int pageSize)
+        public List<Product> GetProductsByBrand(int brand, int page, int pageSize)
         {
             throw new NotImplementedException();
         }
@@ -51,6 +51,16 @@ namespace HomeAppliances.Data.Concrete.EfCore
 						.Where(i => i.CategoryID == categoryId)
 						.Include(i => i.Brand)
 						.ToList();
+			}
+		}
+
+		public List<Product> GetProductsWithBrand()
+		{
+			using (var context = new EfCoreContext())
+			{
+				return context.Products
+                    .Include(i => i.Brand)
+                    .ToList();
 			}
 		}
 	}

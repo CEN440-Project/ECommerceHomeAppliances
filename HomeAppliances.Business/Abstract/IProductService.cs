@@ -13,10 +13,10 @@ namespace HomeAppliances.Business.Abstract
         Product GetByIdWithBrands(int id);
         Product GetProductDetails(int id);
         List<Product> GetAll();
-        List<Product> GetProductsByBrand(string brand, int page, int pageSize);
+        List<Product> GetProductsByBrand(int brand, int page, int pageSize);
         List<Product> GetProductsByCategoryId(int? categoryId);
-
-        int GetCountByBrand(string brand);
+		List<Product> GetProductsWithBrand();
+		int GetCountByBrand(int brand);
         bool Create(Product entity);
         void Update(Product entity);
         void Delete(Product entity);
