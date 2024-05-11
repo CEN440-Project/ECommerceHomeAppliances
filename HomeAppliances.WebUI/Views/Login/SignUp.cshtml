@@ -1,0 +1,91 @@
+﻿@model UserRegisterViewModel
+@{
+    
+}
+
+<div class="contant">
+	<div id="banner-part" class="banner inner-banner">
+		<div class="container">
+			<div class="bread-crumb-main">
+				<h1 class="banner-title">Kayıt Ol</h1>
+				<div class="breadcrumb">
+					<ul class="inline">
+						<li><a href="/">Ana Sayfa</a></li>
+						<li>Kayıt Ol</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ptb-100">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xl-6 col-lg-8 col-md-8 ">
+					<form class="main-form full" method="post">
+						<div class="row">
+							<div class="col-12 mb-20">
+								<div class="heading-part align-center">
+									<h2 class="heading">Create account</h2>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="f-name">İsim</label>
+									<input type="text" asp-for="Name" required="" placeholder="İsim">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="l-name">Soyisim</label>
+									<input type="text" asp-for="Surname" required="" placeholder="Soyisim">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="username">Kullanıcı Adı</label>
+									<input type="text" id="username" asp-for="Username" required="" placeholder="Kullanıcı Adı">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="login-email">Mail Adresi</label>
+									<input type="email" id="login-email" asp-for="Mail" required="" placeholder="Mail Adresi">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="login-pass">Şifre</label>
+									<input type="password" id="login-pass" asp-for="Password" required="" placeholder="Şifre">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="re-enter-pass">Şifreyi Yeniden Gir</label>
+									<input type="password" id="re-enter-pass" asp-for="ConfirmPassword" required="" placeholder="Şifreyi Yeniden Gir">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="mb-30 dit w-100">
+									<div class="check-box left-side mt-15">
+										<span>
+											<input type="checkbox" name="remember_me" id="remember_me" class="checkbox">
+											<label for="remember_me" class="mb-0">Beni Hatırla</label>
+										</span>
+									</div>
+									<button type="submit" class="btn-color right-side">Kayıt Ol</button>
+								</div>
+							</div>
+							<div class="col-12">
+								<hr>
+								<div class="new-account align-center mt-20">
+									<span>Zaten bir hesabın var mı?</span>
+									<a class="link" title="Giriş Yap" href="/Login/SignIn/">Giriş Yap</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -2,10 +2,12 @@
 using HomeAppliances.Data.Abstract;
 using HomeAppliances.Entity.Concrete;
 using HomeAppliances.WebUI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HomeAppliances.WebUI.Controllers
 {
+	[Authorize(Roles = "Admin")]
     public class ShopController : Controller
     {
         private IProductService _productService;

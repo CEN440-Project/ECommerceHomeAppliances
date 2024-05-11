@@ -1,4 +1,5 @@
 ﻿using HomeAppliances.Entity.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Data.Concrete.EfCore
 {
-    public class EfCoreContext : DbContext
-    {
+    public class EfCoreContext : IdentityDbContext<AppUser, AppRole, int>
+	{
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer(@"Server=DESKTOP-4M0OQRD\SQLEXPRESS;Database=HomeApplianceDB;User Id=pixxaer;Password=453885;Encrypt=false;TrustServerCertificate=true;");
