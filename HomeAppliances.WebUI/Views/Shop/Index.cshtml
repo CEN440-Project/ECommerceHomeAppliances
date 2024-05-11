@@ -34,13 +34,7 @@
 									@foreach(var item in Model.Brands)
 									{
 										<li>
-<<<<<<< HEAD
-											<a asp-controller="Shop"
-												asp-action="Index"
-												asp-route-category="@item.Name"
-=======
-											<a href="/Shop/Index/@item.Name"
->>>>>>> af15952e102e23ddd2688553a8c7305414ecdd20
+											<a href="@currentUrl/@item.Name"
 											   class="list-group-item list-group-item-action @(Model.SelectedCategory==item.Name.ToLower()?"active":"")">
 												@item.Name
 											</a>
