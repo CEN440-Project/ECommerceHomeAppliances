@@ -23,12 +23,10 @@
 					<div class="sidebar mb-md-30">
 						<div class="sidebar-category sidebar-default">
 							<div class="category-content">
-								<h2 class="cat-title">Categories</h2>
+								<h2 class="cat-title">Markalar</h2>
 								<ul class="pl-0 mb-0">
 									<li>
-										<a asp-controller="Shop"
-										   asp-action="Index"
-										   asp-route-id=""
+										<a href="/Shop/Index/"
 										   class="list-group-item list-group-item-action">
 											Tüm Ürünler
 										</a>
@@ -36,9 +34,13 @@
 									@foreach(var item in Model.Brands)
 									{
 										<li>
+<<<<<<< HEAD
 											<a asp-controller="Shop"
 												asp-action="Index"
 												asp-route-category="@item.Name"
+=======
+											<a href="/Shop/Index/@item.Name"
+>>>>>>> af15952e102e23ddd2688553a8c7305414ecdd20
 											   class="list-group-item list-group-item-action @(Model.SelectedCategory==item.Name.ToLower()?"active":"")">
 												@item.Name
 											</a>
