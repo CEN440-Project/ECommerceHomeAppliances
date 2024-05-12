@@ -1,0 +1,176 @@
+﻿@model CardItemViewModel
+
+@{
+    double totalAll = 0;
+}
+
+<div class="contant">
+    <div id="banner-part" class="banner inner-banner">
+        <div class="container">
+            <div class="bread-crumb-main">
+                <h1 class="banner-title">Shopping Cart</h1>
+                <div class="breadcrumb">
+                    <ul class="inline">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Shopping Cart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ptb-100">
+        <div class="container">
+            <div class="cart-item-table commun-table">
+                <div class="table-responsive">
+                    <table class="table border mb-0">
+                        <thead>
+                            <tr>
+                                <th class="align-left">Product</th>
+                                <th class="align-left">Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Sub Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.CardItems.Count != 0)
+                            {
+                                @foreach (var item in Model.CardItems)
+                                {
+                                    var totalPrice = (item.Product.Price * item.Quantity);
+                                    totalAll += totalPrice;
+                                    <tr>
+                                        <td class="align-left">
+                                            <a href="product-page.html">
+                                                <div class="product-image">
+                                                    <img alt="Eshoper" src="@item.Product.ImageURL">
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="align-left">
+                                            <div class="product-title">
+                                                <a href="product-page.html">@item.Product.Name</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <div class="base-price price-box">
+                                                        <span class="price">₺@item.Product.Price</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="input-box">
+                                                <select data-id="100" class="quantity_cart" value="@item.Quantity" asp-for="@item.Quantity">
+                                                    <option selected="">Adet Seçiniz</option>
+                                                    @for (int i = 1; i <= 10; i++)
+                                                    {
+                                                        <option value="@i">@i</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="total-price price-box">
+                                                <span class="price">₺@totalPrice</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="btn small btn-color">
+                                                <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6">Sepetinizde ürün bulunmamaktadır.</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mb-30">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mt-30">
+                            <a href="/Shop/Index/" class="btn btn-color">
+                                <i class="fa fa-angle-left"></i><span>Alışverişe Devam Et</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-30 right-side float-none-sm">
+                            <a href="javascript:void(0)" class="btn btn-color">Temizle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="mtb-30">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cart-total-table commun-table">
+                            <div class="table-responsive">
+                                <table class="table border">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Sepet Toplamı</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Ürünler Toplamı</td>
+                                            <td>
+                                                <div class="price-box">
+                                                    <span class="price">₺@totalAll</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kargo</td>
+                                            <td>
+                                                <div class="price-box">
+                                                    <span class="price">₺0</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Genel Toplam</b></td>
+                                            <td>
+                                                <div class="price-box">
+                                                    <span class="price"><b>₺@totalAll</b></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="mt-30">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="right-side float-none-xs">
+                            <a href="/Checkout/Index/" class="btn btn-color">
+                                Ödemeye Geç
+                                <span><i class="fa fa-angle-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cart contant end -->

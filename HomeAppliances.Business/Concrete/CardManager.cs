@@ -41,8 +41,8 @@ namespace HomeAppliances.Business.Concrete
             }
         }
 
-        public void ClearCard(string cardId)
-        {
+        public void ClearCard(int cardId)
+		{
             _cardDal.ClearCard(cardId);
         }
 

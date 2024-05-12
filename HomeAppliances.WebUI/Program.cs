@@ -27,12 +27,17 @@ builder.Services.AddScoped(typeof(IBrandDal), typeof(EfCoreBrandDal));
 builder.Services.AddScoped(typeof(IProductDal), typeof(EfCoreProductDal));
 builder.Services.AddScoped(typeof(IOrderDal), typeof(EfCoreOrderDal));
 builder.Services.AddScoped(typeof(ICategoryDal), typeof(EfCoreCategoryDal));
+builder.Services.AddScoped(typeof(IAppUserDal), typeof(EfCoreAppUserDal));
+builder.Services.AddScoped(typeof(ICardItemDal), typeof(EfCoreCardItemDal));
 
 builder.Services.AddScoped(typeof(ICardService), typeof(CardManager));
 builder.Services.AddScoped(typeof(IBrandService), typeof(BrandManager));
 builder.Services.AddScoped(typeof(IProductService), typeof(ProductManager));
 builder.Services.AddScoped(typeof(IOrderService), typeof(OrderManager));
 builder.Services.AddScoped(typeof(ICategoryService), typeof(CategoryManager));
+builder.Services.AddScoped(typeof(IAppUserService), typeof(AppUserManager));
+builder.Services.AddScoped(typeof(ICardItemService), typeof(CardItemManager));
+builder.Services.AddScoped(typeof(IOrderItemService), typeof(OrderItemManager));
 #endregion
 
 //authorization islemi:

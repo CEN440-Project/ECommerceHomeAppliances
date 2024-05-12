@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Business.Abstract
 {
-    public interface IOrderService : IGenericService<Order>
+    public interface ICardItemService : IGenericService<CardItem>
     {
-        void Create(Order entity);
-        List<Order> GetOrders(string userId);
-        Order GetOrderByUserId(int userId);
+        List<CardItem> GetCardItemsWithProducts();
+        List<CardItem> GetCardItemsByCardId(int cardId);
     }
 }

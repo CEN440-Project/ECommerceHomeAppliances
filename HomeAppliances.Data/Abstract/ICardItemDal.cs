@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Data.Abstract
 {
-    public interface ICardDal : IRepository<Card>
+    public interface ICardItemDal : IRepository<CardItem>
     {
-        Card GetByUserID(string userId);
-        void DeleteFromCard(int cardId, int productId);
-        void ClearCard(int cardId);
-
-	}
+        List<CardItem> GetCardItemsWithProducts();
+        List<CardItem> GetCardItemsByCardId(int cardId);
+    }
 }

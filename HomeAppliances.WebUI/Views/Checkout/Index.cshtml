@@ -1,0 +1,180 @@
+﻿@model CheckoutViewModel
+
+@{
+    ViewData["Title"] = "Checkout";
+	double totalAll = 0;
+}
+
+<div class="contant">
+	<div id="banner-part" class="banner inner-banner">
+		<div class="container">
+			<div class="bread-crumb-main">
+				<h1 class="banner-title">Checkout</h1>
+				<div class="breadcrumb">
+					<ul class="inline">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="cart.html">Cart</a></li>
+						<li>Checkout</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="checkout-part ptb-100">
+		<div class="container">
+			<form class="main-form" method="post">
+				<div class="row">
+					<div class="col-12 col-lg-8">
+						<div class="mb-md-30">
+							<div class="mb-60">
+								<div class="row">
+									<div class="col-12">
+										<div class="heading-part mb-30 mb-sm-20">
+											<h3>Billing Details</h3>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label for="full-name">Name*</label>
+											<input id="full-name" type="text" required="" asp-for="AppUser.Name">
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<label for="full-name">Surname*</label>
+											<input id="full-name" type="text" required="" asp-for="AppUser.Surname">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input id="email" type="text" asp-for="AppUser.Email">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label for="phone-no">Phone No*</label>
+											<input id="phone-no" type="text" required="" asp-for="AppUser.PhoneNumber">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label for="address">Address*</label>
+											<input id="address" type="text" required="" asp-for="Order.Address">
+										</div>
+									</div>
+									<div class="col-md-6 col-12">
+										<div class="form-group">
+											<label for="city">City*</label>
+											<input id="city" type="text" required="" asp-for="Order.City">
+										</div>
+									</div>
+									<div class="col-md-6 col-12">
+										<div class="form-group">
+											<label for="town">Town</label>
+											<input id="town" type="text" required="" asp-for="Order.District">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="check-box mt-n2">
+											<span>
+												<input type="checkbox" class="checkbox" id="create-account" name="Create an Account?">
+												<label for="create-account" class="mb-0">Create an Account?</label>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="heading-part mb-30">
+										<h3>Shipping Details</h3>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="mb-20 mt-n2">
+										<div class="check-box">
+											<span>
+												<input type="checkbox" class="checkbox" id="different-address" name="Ship to a different address?">
+												<label for="different-address" class="mb-0">Ship to a different address?</label>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-12">
+									<h4>Order Notes</h4>
+									<div class="notes p-4">
+										<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-4">
+						<div class="heading-part mb-30 mb-sm-20">
+							<h3>Your order</h3>
+						</div>
+						<div class="checkout-products sidebar-product mb-60">
+							<ul>
+								@foreach (var item in Model.CardItems)
+								{
+									var oldPrice = (item.Product.Price * 1.1);
+
+									var totalPrice = (item.Product.Price * item.Quantity);
+									totalAll += totalPrice;
+
+									<li>
+										<div class="pro-media"> <a href="product-page.html"><img alt="Xpoge" src="images/1.jpg"></a> </div>
+										<div class="pro-detail-info">
+											<a href="product-page.html" class="product-title">@item.Product.Name</a>
+											<div class="price-box">
+												<span class="price">₺@item.Product.Price</span>
+												<del class="price old-price">₺@oldPrice</del>
+											</div>
+											<div class="checkout-qty">
+												<div>
+													<label>Adet: </label>
+													<span class="info-deta">@item.Quantity</span>
+												</div>
+											</div>
+										</div>
+									</li>
+								}
+							</ul>
+						</div>
+						<div class="complete-order-detail commun-table gray-bg mb-30">
+							<div class="table-responsive">
+								<table class="table m-0">
+									<tbody>
+										<tr>
+											<td><b>Order Places :</b></td>
+											<td>@DateTime.Now.ToShortDateString()</td>
+										</tr>
+										<tr>
+											<td><b>Total :</b></td>
+											<td><div class="price-box"> <span class="price">₺@totalAll</span> </div></td>
+										</tr>
+										<tr>
+											<td><b>Payment :</b></td>
+											<td>COD</td>
+										</tr>
+										<tr>
+											<td><b>Order No. :</b></td>
+											<td>#011052</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<button type="submit" class="btn full btn-color">Place order</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Checkout end -->

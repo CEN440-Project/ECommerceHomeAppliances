@@ -3,6 +3,7 @@ using HomeAppliances.Data.Abstract;
 using HomeAppliances.Entity.Concrete;
 using HomeAppliances.WebUI.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HomeAppliances.WebUI.Controllers
@@ -13,16 +14,21 @@ namespace HomeAppliances.WebUI.Controllers
         private IProductService _productService;
         private ICategoryDal _categoryService;
 		private IBrandDal _brandService;
+        private ICardService _cardService;
+        private ICardItemService _cardItemService;
+        private readonly UserManager<AppUser> _userManager;
 
+        public ShopController(IProductService productService, ICategoryDal categoryService, IBrandDal brandService, ICardService cardService, ICardItemService cardItemService, UserManager<AppUser> userManager)
+        {
+            _productService = productService;
+            _categoryService = categoryService;
+            _brandService = brandService;
+            _cardService = cardService;
+            _cardItemService = cardItemService;
+            _userManager = userManager;
+        }
 
-		public ShopController(IProductService productService, ICategoryDal categoryService, IBrandDal brandService)
-		{
-			_productService = productService;
-			_categoryService = categoryService;
-			_brandService = brandService;
-		}
-
-		[Route("Shop/Index/{ProductCategory?}/{brand?}")]
+        [Route("Shop/Index/{ProductCategory?}/{brand?}")]
 		public IActionResult Index(int? ProductCategory, string? brand)
         {
 			ProductListModel model = new ProductListModel();
@@ -62,15 +68,35 @@ namespace HomeAppliances.WebUI.Controllers
 				model.Brands = _brandService.GetAll();
 				model.ProductCategories = _categoryService.GetAll();
 				
-				return View(model);
+				return View(model); 
 			}
         }
-		public IActionResult Detail(int id)
+		public async Task<IActionResult> Detail(int id)
 		{
-			Product product = new Product();
-			product = _productService.GetProductDetails(id);
+            var value = await _userManager.FindByNameAsync(User.Identity.Name);
+            var userId = value.Id;
 
-			return View(product);
-		}
+            var result = _cardService.GetCardByUserID(userId.ToString());
+            var cardId = result.Id;
+            ViewBag.cardId = Convert.ToInt32(cardId);
+
+            return View(new ProductCardItemViewModel()
+            {
+                Product = _productService.GetProductDetails(id),
+            });
+        }
+        [HttpPost]
+        public async Task<IActionResult> Detail(ProductCardItemViewModel productCardItemViewModel)
+        {
+            CardItem createCardItem = new CardItem()
+            {
+                CardId = productCardItemViewModel.CardItem.CardId,
+                ProductId = productCardItemViewModel.CardItem.ProductId,
+                Quantity = productCardItemViewModel.CardItem.Quantity,
+            };
+
+            _cardItemService.TCreate(createCardItem);
+            return RedirectToAction("Detail");
+        }
     }
 }
