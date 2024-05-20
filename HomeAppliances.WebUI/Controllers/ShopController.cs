@@ -89,6 +89,7 @@ namespace HomeAppliances.WebUI.Controllers
             return View(new ProductCardItemViewModel()
             {
                 Product = _productService.GetProductDetails(id),
+                LastProducts = _productService.GetAll().Take(4).ToList(),
             });
         }
         [HttpPost]

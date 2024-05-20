@@ -6,5 +6,6 @@ namespace HomeAppliances.WebUI.Models
     {
         public Product Product { get; set; }
         public CardItem CardItem { get; set; }
+        public List<Product> LastProducts { get; set; }
     }
 }

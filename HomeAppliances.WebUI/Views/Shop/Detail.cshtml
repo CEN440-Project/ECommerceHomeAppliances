@@ -5,12 +5,12 @@
     <div id="banner-part" class="banner inner-banner">
         <div class="container">
             <div class="bread-crumb-main">
-                <h1 class="banner-title">Shop</h1>
+                <h1 class="banner-title">Ürün Detayı</h1>
                 <div class="breadcrumb">
                     <ul class="inline">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li>Shop Detail</li>
+                        <li><a href="/">Ana Sayfa</a></li>
+                        <li><a href="/Shop/Index">Tüm Ürünler</a></li>
+                        <li>Ürün Detayı</li>
                     </ul>
                 </div>
             </div>
@@ -23,10 +23,8 @@
                     <div class="align-center mb-md-30">
                         <ul id="glasscase" class="gc-start">
                             <li><img src="@Model.Product.ImageURL" alt="Xpoge" /></li>
-                            <li><img src="~/images/2.jpg" alt="Xpoge" /></li>
-                            <li><img src="~/images/3.jpg" alt="Xpoge" /></li>
-                            <li><img src="~/images/4.jpg" alt="Xpoge" /></li>
-                            <li><img src="~/images/5.jpg" alt="Xpoge" /></li>
+                            <li><img src="@Model.Product.ImageURL" alt="Xpoge" /></li>
+                            <li><img src="@Model.Product.ImageURL" alt="Xpoge" /></li>
                             <li><img src="~/images/6.jpg" alt="Xpoge" /></li>
                         </ul>
                     </div>
@@ -38,22 +36,23 @@
                             <h4 class="product-item-name">@Model.Product.ProductCategory.Name</h4>
                             <h6 class="product-item-name">@Model.Product.Brand.Name</h6>
                             <div class="price-box">
-                                <span class="price">$@Model.Product.Price</span>
-                                <del class="price old-price">$120.00</del>
+                                <span class="price">₺@Model.Product.Price</span>
+                                <del class="price old-price">₺@(Model.Product.Price * 1.2)</del>
                             </div>
                             <div class="rating-main">
                                 <div class="rating-summary-block">
                                     <div title="53%" class="rating-result"> <span style="width:53%"></span> </div>
                                 </div>
-                                <span>1 Review (s)</span>
+                                <span>1 Görüntülenme</span>
                             </div>
                             <div class="product-des">
                                 <p>@Model.Product.Description</p>
                             </div>
                             <ul class="product-list">
-                                <li><i class="fa fa-check"></i> Satisfaction 100% Guaranteed</li>
-                                <li><i class="fa fa-check"></i> Free shipping on orders over $99</li>
-                                <li><i class="fa fa-check"></i> 14 day easy Return</li>
+                                <li><i class="fa fa-check"></i> Satış sonrası 7/24 canlı destek hizmeti</li>
+                                <li><i class="fa fa-check"></i> ₺20.000 ve üzeri alışverişlerinizde ücretsiz kurulum imkanı</li>
+                                <li><i class="fa fa-check"></i> 14 gün içerisinde iade imkanı</li>
+                                <li><i class="fa fa-check"></i> 2 yıl boyunca garanti ve +1 yıl boyunca ücretsiz servis.</li>
                             </ul>
                             <hr class="mb-20">
                             <form method="post">
@@ -62,7 +61,7 @@
                                         <div class="table-listing qty mb-20">
                                             <div class="row">
                                                 <div class="col-xl-2 col-md-3 col-sm-12">
-                                                    <span>Qty:</span>
+                                                    <span>Adet:</span>
                                                 </div>
                                                 <div class="col-xl-10 col-md-9 col-sm-12">
                                                     <div class="custom-qty">
@@ -85,7 +84,7 @@
                                         </li>
 
                                         <li class="icon wishlist-icon">
-                                            <a href="wishlist.html" class="btn btn-transparent"><span></span></a>
+                                            <a href="#" class="btn btn-transparent"><span></span></a>
                                         </li>
                                         <li class="icon compare-icon">
                                             <a href="#" class="btn btn-transparent"><span></span></a>
@@ -218,248 +217,56 @@
         <div class="row">
             <div class="col-12">
                 <div class="heading-part text-center mb-30 mb-sm-20">
-                    <h2 class="main_title">Related Product</h2>
+                    <h2 class="main_title">Son Ürünler</h2>
                 </div>
             </div>
         </div>
         <div class="position-r">
             <div class="row">
                 <div class="product-slider owl-carousel position-initial">
-                    <div class="item">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <div class="sale-label"><span>Sale</span></div>
-                                <a href="product-page.html">
-                                    <img src="images/1.jpg" alt="Xpoge">
-                                </a>
-                            </div>
-                            <div class="product-details-outer">
-                                <div class="product-details">
-                                    <div class="product-title">
-                                        <a href="product-page.html">Men's Full Sleeves Collar Shirt</a>
-                                    </div>
-                                    <div class="price-box">
-                                        <span class="price">$95.50</span>
-                                        <del class="price old-price">$100.00</del>
-                                    </div>
+                    @foreach (var item in Model.LastProducts)
+                    {
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <div class="sale-label"><span>Yeni</span></div>
+                                    <a href="product-page.html">
+                                        <img src="@item.ImageURL" alt="Product">
+                                    </a>
                                 </div>
-                                <div class="product-details-btn">
-                                    <ul>
-                                        <li class="icon cart-icon">
-                                            <a href="cart.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon wishlist-icon">
-                                            <a href="wishlist.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon compare-icon">
-                                            <a href="#">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <a href="product-page.html">
-                                    <img src="images/2.jpg" alt="Xpoge">
-                                </a>
-                            </div>
-                            <div class="product-details-outer">
-                                <div class="product-details">
-                                    <div class="product-title">
-                                        <a href="product-page.html">Women's Cape Jacket</a>
+                                <div class="product-details-outer">
+                                    <div class="product-details">
+                                        <div class="product-title">
+                                            <a href="product-page.html">@item.Name</a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price">₺@item.Price</span>
+                                            <del class="price old-price">@(item.Price * 1.2)</del>
+                                        </div>
                                     </div>
-                                    <div class="price-box">
-                                        <span class="price">$30.22</span>
+                                    <div class="product-details-btn">
+                                        <ul>
+                                            <li class="icon cart-icon">
+                                                <a href="/Shop/Detail/@item.ProductID">
+                                                    <span></span>
+                                                </a>
+                                            </li>
+                                            <li class="icon wishlist-icon">
+                                                <a href="#">
+                                                    <span></span>
+                                                </a>
+                                            </li>
+                                            <li class="icon compare-icon">
+                                                <a href="#">
+                                                    <span></span>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <div class="product-details-btn">
-                                    <ul>
-                                        <li class="icon cart-icon">
-                                            <a href="cart.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon wishlist-icon">
-                                            <a href="wishlist.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon compare-icon">
-                                            <a href="#">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <div class="new-label"><span>New</span></div>
-                                <a href="product-page.html">
-                                    <img src="images/3.jpg" alt="Xpoge">
-                                </a>
-                            </div>
-                            <div class="product-details-outer">
-                                <div class="product-details">
-                                    <div class="product-title">
-                                        <a href="product-page.html">Men's Regular Fit T-Shirt</a>
-                                    </div>
-                                    <div class="price-box">
-                                        <span class="price">$56.00</span>
-                                    </div>
-                                </div>
-                                <div class="product-details-btn">
-                                    <ul>
-                                        <li class="icon cart-icon">
-                                            <a href="cart.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon wishlist-icon">
-                                            <a href="wishlist.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon compare-icon">
-                                            <a href="#">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <a href="product-page.html">
-                                    <img src="images/4.jpg" alt="Xpoge">
-                                </a>
-                            </div>
-                            <div class="product-details-outer">
-                                <div class="product-details">
-                                    <div class="product-title">
-                                        <a href="product-page.html">Women's Cotton Plain T-Shirts</a>
-                                    </div>
-                                    <div class="price-box">
-                                        <span class="price">$65.23</span>
-                                        <del class="price old-price">$70.00</del>
-                                    </div>
-                                </div>
-                                <div class="product-details-btn">
-                                    <ul>
-                                        <li class="icon cart-icon">
-                                            <a href="cart.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon wishlist-icon">
-                                            <a href="wishlist.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon compare-icon">
-                                            <a href="#">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <a href="product-page.html">
-                                    <img src="images/5.jpg" alt="Xpoge">
-                                </a>
-                            </div>
-                            <div class="product-details-outer">
-                                <div class="product-details">
-                                    <div class="product-title">
-                                        <a href="product-page.html">Men's Printed Regular Shirt</a>
-                                    </div>
-                                    <div class="price-box">
-                                        <span class="price">$45.25</span>
-                                    </div>
-                                </div>
-                                <div class="product-details-btn">
-                                    <ul>
-                                        <li class="icon cart-icon">
-                                            <a href="cart.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon wishlist-icon">
-                                            <a href="wishlist.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon compare-icon">
-                                            <a href="#">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <div class="sale-label"><span>Sale</span></div>
-                                <div class="new-label"><span>New</span></div>
-                                <a href="product-page.html">
-                                    <img src="images/6.jpg" alt="Xpoge">
-                                </a>
-                            </div>
-                            <div class="product-details-outer">
-                                <div class="product-details">
-                                    <div class="product-title">
-                                        <a href="product-page.html">Polyester Printed T-Shirts</a>
-                                    </div>
-                                    <div class="price-box">
-                                        <span class="price">$88.54</span>
-                                        <del class="price old-price">$100.00</del>
-                                    </div>
-                                </div>
-                                <div class="product-details-btn">
-                                    <ul>
-                                        <li class="icon cart-icon">
-                                            <a href="cart.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon wishlist-icon">
-                                            <a href="wishlist.html">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                        <li class="icon compare-icon">
-                                            <a href="#">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
