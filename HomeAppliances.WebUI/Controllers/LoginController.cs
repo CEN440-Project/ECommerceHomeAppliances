@@ -43,6 +43,7 @@ namespace HomeAppliances.WebUI.Controllers
 				Surname = p.Surname,
 				Email = p.Mail,
 				UserName = p.Username,
+				ImageUrl = "x"
 			};
 			if (p.Password == p.ConfirmPassword)
 			{

@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HomeAppliances.WebUI.Controllers
 {
-	[Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin,User")]
+    [AllowAnonymous]
     public class ShopController : Controller
     {
         private IProductService _productService;
@@ -73,12 +74,17 @@ namespace HomeAppliances.WebUI.Controllers
         }
 		public async Task<IActionResult> Detail(int id)
 		{
-            var value = await _userManager.FindByNameAsync(User.Identity.Name);
-            var userId = value.Id;
+            if(User.Identity.IsAuthenticated)
+            {
+				var value = await _userManager.FindByNameAsync(User.Identity.Name);
+				var userId = value.Id;
 
-            var result = _cardService.GetCardByUserID(userId.ToString());
-            var cardId = result.Id;
-            ViewBag.cardId = Convert.ToInt32(cardId);
+				var result = _cardService.GetCardByUserID(userId.ToString());
+				var cardId = result.Id;
+				ViewBag.cardId = Convert.ToInt32(cardId);
+			}
+
+            
 
             return View(new ProductCardItemViewModel()
             {

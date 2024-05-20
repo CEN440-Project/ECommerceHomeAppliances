@@ -16,10 +16,10 @@ namespace HomeAppliances.WebUI.Controllers
 		}
 		public IActionResult Index()
 		{
-			return View(new ProductListModel()
-			{
-				Products = _productService.GetAll()
-			});
+
+			var products = _productService.GetAll().Take(4).ToList();
+
+			return View(products);
 
 		}
 	}

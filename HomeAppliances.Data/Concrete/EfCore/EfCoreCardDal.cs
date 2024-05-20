@@ -49,5 +49,10 @@ namespace HomeAppliances.Data.Concrete.EfCore
 				context.SaveChanges();
 			}
 		}
+
+		public void ClearCard(string cardId)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

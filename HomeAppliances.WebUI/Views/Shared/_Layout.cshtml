@@ -62,7 +62,7 @@
 				<div class="row m-0">
 					<div class="col-lg-3 col-md-4 col-4 p-0">
 						<div class="navbar-header">
-							<a class="navbar-brand page-scroll" href="index.html">
+							<a class="navbar-brand page-scroll" asp-controller="Home" asp-action="Index">
 								<img alt="xpoge" src="~/images/logo.png">
 							</a>
 						</div>
@@ -80,7 +80,7 @@
 									</li>
 									<li class="level dropdown">
 										<span class="opener plus"></span>
-										<a href="shop.html" class="nav-link">Kategoriler</a>
+										<a asp-controller="Shop" asp-action="Index" class="nav-link">Kategoriler</a>
 										<div class="megamenu full mobile-sub-menu">
 											<div class="megamenu-inner-top">
 												<div class="row sub-menu-level1">
@@ -115,7 +115,7 @@
 														</ul>
 													</div>
 												</div>
-												<div class="row">
+												@* <div class="row">
 													<div class="col-lg-6 mt-30 d-none d-lg-block">
 														<div class="sub-menu-img">
 															<a href="shop.html">
@@ -130,7 +130,7 @@
 															</a>
 														</div>
 													</div>
-												</div>
+												</div> *@
 											</div>
 										</div>
 									</li>
@@ -183,17 +183,17 @@
 										<div class="header-link-dropdown account-link-dropdown">
 											<ul class="link-dropdown-list" style="display: flex; justify-content: center;">
 												<li>
-													<button class="btn-color" style="margin: 2px; padding:18px;"><a href="#">Giriş Yap</a></button>
+													<button class="btn-color" style="margin: 2px; padding:18px;"><a asp-controller="Login" asp-action="SignIn">Giriş Yap</a></button>
 												</li>
 												<li>
-													<button class="btn-color" style="margin: 2px; padding:18px;"><a href="#">Kayıt Ol</a></button>
+													<button class="btn-color" style="margin: 2px; padding:18px;"><a asp-controller="Login" asp-action="SignUp">Kayıt Ol</a></button>
 												<li>
 											</ul>
 										</div>
 									</li>
 									<li class="cart-icon">
 										<a asp-controller="Checkout" asp-action="Index"> <span> <small class="cart-notification">2</small> </span> </a>
-										<div class="cart-dropdown header-link-dropdown">
+										@* <div class="cart-dropdown header-link-dropdown">
 											<ul class="cart-list link-dropdown-list">
 												<li>
 													<a class="close-cart"><i class="fa fa-times-circle"></i></a>
@@ -231,7 +231,7 @@
 											<p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
 											<div class="clearfix"></div>
 											<div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
-										</div>
+										</div> *@
 									</li>
 								</ul>
 							</div>
@@ -286,33 +286,31 @@
 							<div class="col-12 col-lg-3 col-md-6">
 								<div class="footer-static-block">
 									<span class="opener plus"></span>
-									<h3 class="head-three">Information</h3>
+									<h3 class="head-three">Bilg</h3>
 									<ul class="footer-menu footer-block-contant">
-										<li><a href="contact.html">Contact Us</a></li>
-										<li><a href="javascript:void(0)">Brands</a></li>
+										<li><a href="contact.html">Bize Ulaşın</a></li>
+										<li><a href="javascript:void(0)">Markalar</a></li>
 										<li><a href="blog-left-col.html">Blog</a></li>
-										<li><a href="javascript:void(0)">Returns</a></li>
-										<li><a href="javascript:void(0)">Privacy Policy</a></li>
+										<li><a href="javascript:void(0)">Hakkımızda</a></li>
+										<li><a href="javascript:void(0)">FAQ's</a></li>
 									</ul>
 								</div>
 							</div>
 							<div class="col-12 col-lg-3 col-md-6">
 								<div class="footer-static-block">
 									<span class="opener plus"></span>
-									<h3 class="head-three">My Account</h3>
+									<h3 class="head-three">Hesabım</h3>
 									<ul class="footer-menu footer-block-contant">
-										<li><a href="javascript:void(0)">Order History</a></li>
-										<li><a href="wishlist.html">Wish List</a></li>
-										<li><a href="javascript:void(0)">Newsletter</a></li>
-										<li><a href="javascript:void(0)">Specials</a></li>
-										<li><a href="javascript:void(0)">Gift Certificates</a></li>
+										<li><a href="javascript:void(0)">Sipariş Geçmişi</a></li>
+										<li><a href="wishlist.html">İstek Listesi</a></li>
+										<li><a href="javascript:void(0)">Kuponlar</a></li>
 									</ul>
 								</div>
 							</div>
 							<div class="col-12 col-lg-3 col-md-6">
 								<div class="footer-static-block">
 									<span class="opener plus"></span>
-									<h3 class="head-three">Contact us</h3>
+									<h3 class="head-three">Bize Ulaşın</h3>
 									<div class="contact-box footer-block-contant">
 										<ul>
 											<li>
@@ -320,7 +318,7 @@
 													<img src="images/address-icon.svg" alt="xpoge">
 												</div>
 												<div class="contact-box-detail">
-													<p>869 Lexington Ave, New York, NY 10065, USA</p>
+													<p>Adana Çukurova</p>
 												</div>
 											</li>
 											<li>
@@ -336,7 +334,7 @@
 													<img src="images/mail-icon.svg" alt="xpoge">
 												</div>
 												<div class="contact-box-detail">
-													<p>xpoge@hi123.com</p>
+													<p>info@magaza.com</p>
 												</div>
 											</li>
 										</ul>
@@ -350,7 +348,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="w-100">
-								<p class="mb-0">© Xpoge all Rights Reserverd theme by <a href="https://TemplatesCoder.com/" target="_blank" title="TemplatesCoder">TemplatesCoder</a></p>
+								
 							</div>
 						</div>
 						<div class="col-12">
