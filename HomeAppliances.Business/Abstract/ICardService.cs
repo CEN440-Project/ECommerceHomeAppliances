@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliances.Business.Abstract
 {
-    public interface ICardService
+    public interface ICardService 
     {
         void InitializeCard(string userId);
         Card GetCardByUserID(string userId);

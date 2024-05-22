@@ -74,8 +74,8 @@ namespace HomeAppliances.WebUI.Controllers
 					_orderItemService.TCreate(orderItem);
 				}
 
-				var selectedCardId = _cardItemService.GetCardItemsByCardId(userId)[0].CardId;
-				_cardService.ClearCard(selectedCardId);
+				var cardid = _cardService.GetCardByUserID(userId.ToString()).Id;
+				_cardService.ClearCard(cardid);
 
 				return RedirectToAction("Index" ,"Home");
 			}

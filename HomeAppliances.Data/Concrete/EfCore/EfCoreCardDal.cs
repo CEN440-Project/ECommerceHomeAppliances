@@ -11,6 +11,8 @@ namespace HomeAppliances.Data.Concrete.EfCore
 {
 	public class EfCoreCardDal : EfCoreGenericRepository<Card, EfCoreContext>, ICardDal
 	{
+
+		
 		public override void Update(Card entity)
 		{
 			using (var context = new EfCoreContext())

@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using HomeAppliances.WebUI.Models;
 using Microsoft.AspNetCore.Authorization;
+using HomeAppliances.Business.Abstract;
+using HomeAppliances.Data.Abstract;
 
 namespace HomeAppliances.WebUI.Controllers
 {
@@ -14,6 +16,7 @@ namespace HomeAppliances.WebUI.Controllers
 		private readonly UserManager<AppUser> _userManager;
 		//sisteme authentic olmak için:
 		private readonly SignInManager<AppUser> _signInManager;
+		private readonly ICardDal _cardService;
 
 		//ctor:usermanager'a atama işlemi yapmak için(iki ctoru birleştirdik altta)
 		//public LoginController(UserManager<AppUser> userManager)
@@ -21,10 +24,11 @@ namespace HomeAppliances.WebUI.Controllers
 		//	_userManager = userManager;
 		//}
 
-		public LoginController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+		public LoginController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ICardDal cardService)
 		{
 			_userManager = userManager;
 			_signInManager = signInManager;
+			_cardService = cardService;
 		}
 
 
@@ -50,6 +54,9 @@ namespace HomeAppliances.WebUI.Controllers
 				var result = await _userManager.CreateAsync(appUser, p.Password);
 				if (result.Succeeded)
 				{
+					var userid = await _userManager.GetUserIdAsync(appUser);
+					_cardService.Create(new Card() { UserID = userid });
+
 					return RedirectToAction("SignIn", "Login");
 				}
 				else
